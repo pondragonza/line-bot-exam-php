@@ -45,4 +45,6 @@ echo $result . "\r\n";
 }
 echo "OK";
 echo "ok very good";
-echo $event['replyToken'];
+var_dump($event);
+echo $result;
+
