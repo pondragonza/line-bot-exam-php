@@ -16,7 +16,6 @@ if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 // Get text sent
 $text = $event['source']['userId'];
 var_dump($event);
-  echo $event;
 // Get replyToken
 $replyToken = $event['replyToken'];
 // Build message to reply back
@@ -44,5 +43,6 @@ echo $result . "\r\n";
 }
 }
 }
-//echo "OK";
+echo "OK";
 echo "ok very good";
+echo $event;
