@@ -43,6 +43,6 @@ echo $result . "\r\n";
 }
 }
 }
-//echo "OK";
-//echo "ok very good";
-echo $events['source']['userId'];
+echo "OK";
+echo "ok very good";
+echo $text;
