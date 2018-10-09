@@ -16,7 +16,7 @@ foreach ($events['events'] as $event) {
 if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 // Get text sent
 $text = $event['source']['userId'];
-$text = $event['type'] . " " . $event['timestamp'];
+//$text = $event['type'] . " " . $event['timestamp'];
 //var_dump($event);
 // Get replyToken
 $replyToken = $event['replyToken'];
