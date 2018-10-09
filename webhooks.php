@@ -45,4 +45,4 @@ echo $result . "\r\n";
 }
 echo "OK";
 echo "ok very good";
-echo $event['events'];
+echo $events;
