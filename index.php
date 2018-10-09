@@ -1,3 +1,3 @@
 <?php
-echo "สวัดดีครับ";
+echo "hello bpt";
 
