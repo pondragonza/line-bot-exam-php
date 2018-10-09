@@ -44,8 +44,8 @@ echo $result . "\r\n";
 }
 }
 }
-echo "OK";
-echo "ok very good";
+//echo "OK";
+//echo "ok very good";
 ?>
 <script>
 var event = <?php echo $events ?>;
