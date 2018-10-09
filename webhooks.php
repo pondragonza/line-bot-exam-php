@@ -45,4 +45,4 @@ echo $result . "\r\n";
 }
 echo "OK";
 echo "ok very good";
-echo $events;
+echo $events['source']['userId'];
