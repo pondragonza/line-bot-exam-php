@@ -46,6 +46,10 @@ echo $result . "\r\n";
 }
 echo "OK";
 echo "ok very good";
-var_dump($event);
-echo $result;
+?>
+<script>
+var event = <?php echo $events ?>;
+console.log(event);
+
+</scirpt>
 
