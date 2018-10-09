@@ -16,7 +16,7 @@ foreach ($events['events'] as $event) {
 if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 // Get text sent
 $text = $event['source']['userId'];
-//var_dump($event);
+var_dump($event);
 // Get replyToken
 $replyToken = $event['replyToken'];
 // Build message to reply back
@@ -46,6 +46,6 @@ echo $result . "\r\n";
 }
 echo "OK";
 echo "ok very good";
-//var_dump($event);
-//echo $result;
+var_dump($event);
+echo $result;
 
