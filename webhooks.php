@@ -34,7 +34,7 @@ $data = [
 ];
   //var_dump($data);
 $post = json_encode($data);
- var_drmp($post);
+ echo($post);
 $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
