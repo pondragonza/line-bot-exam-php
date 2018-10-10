@@ -1,5 +1,6 @@
 <?php
-
+$proxy = 'proxyurl:port';
+$proxyauth = 'username:password';
 /**
  * Copyright 2016 LINE Corporation
  *
