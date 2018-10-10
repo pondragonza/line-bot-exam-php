@@ -9,6 +9,8 @@ $access_token = '2/ktZPikCIG3ZL076jYYNfe3mAg5TQ55Uz/GoA6dILTTUClIvRILXa/o96Lp8gf
 $channelSecret = '6d55c36fd534e5266875bc21a5674292';
 
 $pushID = 'U440df8f5d0462b99d170bf9effbcd26a';
+$proxy = 'proxyurl:port';
+$proxyauth = 'username:password';
 
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
