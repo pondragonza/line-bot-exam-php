@@ -1,5 +1,5 @@
 <?php // callback.php
-http://fixie:bzgCCzMBFxQGvPd@velodrome.usefixie.com:80);
+curl http://welcome.usefixie.com --proxy http://fixie:bzgCCzMBFxQGvPd@velodrome.usefixie.com:80
 require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 $access_token = '2/ktZPikCIG3ZL076jYYNfe3mAg5TQ55Uz/GoA6dILTTUClIvRILXa/o96Lp8gfcLH5q2dxJeVtiHq8NZ5mNCHtH8VBUKzKfNBxIpMKZnn1XFCTFp/pTOwydGaGPvP0eFvZDsizHoFIRbWFTqYowyQdB04t89/1O/w1cDnyilFU=';
