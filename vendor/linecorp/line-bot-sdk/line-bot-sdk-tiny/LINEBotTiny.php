@@ -1,4 +1,6 @@
 <?php
+$proxy = 'http://fixie:bzgCCzMBFxQGvPd@velodrome.usefixie.com:80';
+$proxyauth = 'pondragonza098@gmail.com:t3bGWBKaPq6RaR:';
 
 /**
  * Copyright 2016 LINE Corporation
@@ -172,6 +174,8 @@ function exec_url($fullurl,$channelAccessToken,$message)
         curl_setopt($ch, CURLOPT_FAILONERROR, 0);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
         curl_setopt($ch, CURLOPT_URL, $fullurl);
+        curl_setopt($ch, CURLOPT_PROXY, $proxy);
+        curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
         
         $returned =  curl_exec($ch);
     
