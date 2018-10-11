@@ -7,7 +7,7 @@ $access_token = '2/ktZPikCIG3ZL076jYYNfe3mAg5TQ55Uz/GoA6dILTTUClIvRILXa/o96Lp8gf
 $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
-//var_dump($events);
+echo ($events);
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
 // Loop through each event
@@ -17,7 +17,7 @@ if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 // Get text sent
 $text = $event['source']['userId'];
 //$text = $event['source'] . " " . $event['userId'];
-echo "$text";
+echo ($text);
 //var_dump($event);
 // Get replyToken
 $replyToken = $event['replyToken'];
@@ -32,7 +32,7 @@ $data = [
 'replyToken' => $replyToken,
 'messages' => [$messages],
 ];
- echo "data";
+ echo ($data);
 $post = json_encode($data);
  echo($post);
 $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
