@@ -150,6 +150,8 @@ function exec_get($fullurl,$channelAccessToken)
         curl_setopt($ch, CURLOPT_FAILONERROR, 0);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
         curl_setopt($ch, CURLOPT_URL, $fullurl);
+        curl_setopt($ch, CURLOPT_PROXY, $proxy);
+        curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
         
         $returned =  curl_exec($ch);
     
