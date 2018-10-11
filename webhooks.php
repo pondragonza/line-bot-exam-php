@@ -18,7 +18,7 @@ if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 // Get text sent
 $text = $event['source']['userId'];
 //$text = $event['source'] . " " . $event['userId'];
-echo($text);
+echo "$text";
 //var_dump($event);
 // Get replyToken
 $replyToken = $event['replyToken'];
