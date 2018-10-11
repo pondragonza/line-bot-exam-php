@@ -1,5 +1,5 @@
 <?php
-$proxy = 'https://fixie:bzgCCzMBFxQGvPd@velodrome.usefixie.com:80';
+$proxy = 'http://fixie:bzgCCzMBFxQGvPd@velodrome.usefixie.com:80';
 $proxyauth = 'pondragonza098@gmail.com:t3bGWBKaPq6RaR:';
 
 /**
