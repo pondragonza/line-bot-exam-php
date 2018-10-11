@@ -1,6 +1,6 @@
 <?php
-$proxy = 'http://fixie:bzgCCzMBFxQGvPd@velodrome.usefixie.com:80';
-$proxyauth = 'pondragonza098@gmail.com:t3bGWBKaPq6RaR:';
+$proxy = 'https://fixie:bzgCCzMBFxQGvPd@velodrome.usefixie.com:80';
+//$proxyauth = 'pondragonza098@gmail.com:t3bGWBKaPq6RaR:';
 
 /**
  * Copyright 2016 LINE Corporation
