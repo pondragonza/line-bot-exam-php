@@ -14,8 +14,7 @@ foreach ($events['events'] as $event) {
 // Reply only when message sent is in 'text' format
 if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 // Get text sent
-$text = $event['source']['userId'];
-$text1 =$event2['source']['type']; 
+$text = $event['source']['userId']['type']['gropId'];
 //$text = $event['source'] . " " . $event['userId'];
 echo ($text);
 echo ($text1);
