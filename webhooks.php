@@ -7,7 +7,6 @@ $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
 echo ($events);
-var_dump =("$event");
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
 // Loop through each event
@@ -16,9 +15,10 @@ foreach ($events['events'] as $event) {
 if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 // Get text sent
 //$text = $event['source']['userId']['type']['gropId'];
-$text = $event['source'] . " " . $event['userId'] . " " . $event['type'];
+$text = $event['source'] . " " . $event['userId'];
+$tex1 = $event['source'] . " " . $event['type'];
 echo ($text);
-var_dump($event);
+echo ($text1);
 // Get replyToken
 $replyToken = $event['replyToken'];
 // Build message to reply back
@@ -35,7 +35,6 @@ $data = [
 echo ($data);
 $post = json_encode($data);
 echo($post);
-var_dump($post);
 $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
