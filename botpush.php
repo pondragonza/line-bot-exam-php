@@ -1,14 +1,12 @@
 <?php
-$proxy = 'proxyurl:port';
-$proxyauth = 'username:password';
+$proxy = 'http://fixie:bzgCCzMBFxQGvPd@velodrome.usefixie.com:80';
+$proxyauth = 'pondragonza098@gmail.com:t3bGWBKaPq6RaR:';
 
 
 require "vendor/autoload.php";
 
 $access_token = '2/ktZPikCIG3ZL076jYYNfe3mAg5TQ55Uz/GoA6dILTTUClIvRILXa/o96Lp8gfcLH5q2dxJeVtiHq8NZ5mNCHtH8VBUKzKfNBxIpMKZnn1XFCTFp/pTOwydGaGPvP0eFvZDsizHoFIRbWFTqYowyQdB04t89/1O/w1cDnyilFU=';
-
 $channelSecret = '6d55c36fd534e5266875bc21a5674292';
-
 $pushID = 'U440df8f5d0462b99d170bf9effbcd26a';
 
 
