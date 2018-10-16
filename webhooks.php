@@ -22,7 +22,7 @@ $replyToken = $event['replyToken'];
 // Build message to reply back
 $messages = [
 'userId' => 'userId', 
-'type' => 'text',
+'type' => 'follow',
 'text' => $text
 ];
 // Make a POST Request to Messaging API to reply to sender
