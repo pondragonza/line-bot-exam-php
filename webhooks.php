@@ -22,7 +22,7 @@ var_dump($event);
 $replyToken = $event['replyToken'];
 // Build message to reply back
 $messages = [
-'type' => 'text',
+'type' => 'hello',
 'text' => $text
 ];
 // Make a POST Request to Messaging API to reply to sender
@@ -31,9 +31,10 @@ $data = [
 'replyToken' => $replyToken,
 'messages' => [$messages],
 ];
- echo ($data);
+echo ($data);
 $post = json_encode($data);
- echo($post);
+echo($post);
+var_dump($post);
 $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
@@ -51,4 +52,4 @@ echo $result . "\r\n";
 }
 }
 //echo "OK";
-echo ($event);
+echo ('55555555');
