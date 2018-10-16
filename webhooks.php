@@ -53,4 +53,4 @@ echo $result . "\r\n";
 }
 }
 //echo "OK";
-echo "$messages";
+echo '$data';
