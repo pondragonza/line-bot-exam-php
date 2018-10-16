@@ -15,7 +15,7 @@ foreach ($events['events'] as $event) {
 if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 // Get text sent
 $text = $event['source']['userId'];
-$event['type'];
+$event['source']['type'];
 //$text = $event['source'] . " " . $event['userId'];
 echo ($text);
 // Get replyToken
