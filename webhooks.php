@@ -53,4 +53,4 @@ echo $result . "\r\n";
 }
 }
 //echo "OK";
-echo ("$ch");
+echo ($ch);
