@@ -21,7 +21,7 @@ echo ($text);
 $replyToken = $event['replyToken'];
 // Build message to reply back
 $messages = [
-'userId' => 'type', 
+'type' => 'userId', 
 'type' => 'text',
 'text' => $text
 ];
