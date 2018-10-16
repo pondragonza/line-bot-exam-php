@@ -18,7 +18,7 @@ $text = $event['source']['userId'];
 //$text = $event['source'] . " " . $event['userId'];
 echo ($text);
 // Get replyToken
-$replyToken = $event['replyToken'];
+$replyToken = $event['replyToken'] ." " . $event['type'];
 // Build message to reply back
 $messages = [
 'type' => 'userId', 
