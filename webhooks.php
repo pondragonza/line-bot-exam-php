@@ -18,7 +18,8 @@ $text = $event['source']['userId'];
 //$text = $event['source'] . " " . $event['userId'];
 echo ($text);
 // Get replyToken
-$replyToken = $event['replyToken'];
+$replyToken = $event['2/ktZPikCIG3ZL076jYYNfe3mAg5TQ55Uz/GoA6dILTTUClIvRILXa/o96Lp8gfcLH5q2dxJeVtiHq8NZ5mNCHtH8VBUKzKfNBxIpMKZnn1XFCTFp/pTOwydGaGPvP0eFvZDsizHoFIRbWFTqYowyQdB04t89/1O/w1cDnyilFU=';
+'];
 // Build message to reply back
 $messages = [
 'userId' => 'type', 
@@ -44,7 +45,7 @@ curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 curl_setopt($ch, CURLOPT_PROXY, $proxy);
 curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
 
- $result = curl_exec($ch);
+$result = curl_exec($ch);
 curl_close($ch);
 echo $result . "\r\n";
 }
