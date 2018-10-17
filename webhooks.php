@@ -29,8 +29,8 @@
       curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($arrayPostData));
       curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
       curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-      curl_setopt($ch, CURLOPT_PROXY, $proxy);
-      curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
+      //curl_setopt($ch, CURLOPT_PROXY, $proxy);
+      //curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
 
       $result = curl_exec($ch);
       curl_close ($ch);
