@@ -1,10 +1,10 @@
 <?php // callback.php
-require "testt.txt";
+//require "testt.txt";
 require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 $access_token = '2/ktZPikCIG3ZL076jYYNfe3mAg5TQ55Uz/GoA6dILTTUClIvRILXa/o96Lp8gfcLH5q2dxJeVtiHq8NZ5mNCHtH8VBUKzKfNBxIpMKZnn1XFCTFp/pTOwydGaGPvP0eFvZDsizHoFIRbWFTqYowyQdB04t89/1O/w1cDnyilFU=';
-$myfile = "testt.txt";
-$file = fopen($myfile,'r+')or die ("can't open file");
+//$myfile = "testt.txt";
+//$file = fopen($myfile,'r+')or die ("can't open file");
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
@@ -17,8 +17,8 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'follow'){//&& $event['message']['type'] == 'text') {
 			// Get text sent
 			$text = $event['source']['userId'];
-			fwrite($file , var_export($text,true));
-  			fclose($file);
+			//fwrite($file , var_export($text,true));
+  			//fclose($file);
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 			
