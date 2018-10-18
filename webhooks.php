@@ -17,6 +17,7 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'follow'){//&& $event['message']['type'] == 'text') {
 			// Get text sent
 			$text = $event['source']['userId'];
+			echo $text;
 			//fwrite($file , var_export($text,true));
   			//fclose($file);
 			// Get replyToken
