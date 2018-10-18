@@ -15,16 +15,16 @@ $events = json_decode($content, true);
 if (!is_null($events['events'])) {
 // Loop through each event
 foreach ($events['events'] as $event) {
-fwrite($file , var_export($events['events'],true));
-fclose($file);
+//fwrite($file , var_export($events['events'],true));
+//fclose($file);
 // Reply only when message sent is in 'text' format
-if ($event['type'] == 'follow'); //&& $event['message']['type'] == 'text') {
+if ($event['type'] == 'follow'){ //&& $event['message']['type'] == 'text') {
   echo "1";
 // Get text sent
 $text = $event['source']['userId'];
 // Get replyToken
-  //fwrite($file , var_export($text,true));
-  //fclose($file);
+  fwrite($file , var_export($text,true));
+  fclose($file);
 $replyToken = $event['replyToken'];
 // Build message to reply back
 $messages = [
