@@ -3,6 +3,7 @@ require "testt.txt";
 https://pondragonza098@gmail.com:t3bGWBKaPq6RaR:@https://fixie:bzgCCzMBFxQGvPd@velodrome.usefixie.com:80;
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 $access_token = '2/ktZPikCIG3ZL076jYYNfe3mAg5TQ55Uz/GoA6dILTTUClIvRILXa/o96Lp8gfcLH5q2dxJeVtiHq8NZ5mNCHtH8VBUKzKfNBxIpMKZnn1XFCTFp/pTOwydGaGPvP0eFvZDsizHoFIRbWFTqYowyQdB04t89/1O/w1cDnyilFU=';
+$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 $myfile = "testt.txt";
 $file = fopen($myfile,'r+')or die ("can't open file");
 $pond = 0;
@@ -29,10 +30,18 @@ if (!is_null($events['events'])) {
                          fclose($file);
 //                          for($i=0;$i>=$pond;$i++){
 //                              $a[$i] = $text;
-                                   
-                       $data1 = file_get_contents("testt.txt");
-                         print_r($data1);
-                         echo ("ok".$data1);
+                      $ch1 = curl_init("https://api.line.me/v2/bot/profile/".$text.);
+                      curl_setopt($ch1, CURLOPT_CUSTOMREQUEST, "GET");
+                      curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true);
+                      //curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+                      curl_setopt($ch1, CURLOPT_HTTPHEADER, $headers);
+                      curl_setopt($ch1, CURLOPT_FOLLOWLOCATION, 1);
+                      curl_setopt($ch1, CURLOPT_PROXY, $proxy);
+                      curl_setopt($ch1, CURLOPT_PROXYUSERPWD, $proxyauth);
+                      $result1 = curl_exec($ch1);
+                      curl_close($ch1);
+                      fwrite($file , var_export($result1,true));
+                      fclose($file);
                        //fwrite($file , var_export($text,true));
                        //fclose($file);
                          
@@ -52,7 +61,7 @@ if (!is_null($events['events'])) {
                        echo ($data);
                       $post = json_encode($data);
                        echo($post);
-                      $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+//                       $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
                       $ch = curl_init($url);
                       curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
                       curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
