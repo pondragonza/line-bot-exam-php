@@ -30,7 +30,7 @@ if (!is_null($events['events'])) {
                          fclose($file);
 //                          for($i=0;$i>=$pond;$i++){
 //                              $a[$i] = $text;
-                      $ch1 = curl_init("https://api.line.me/v2/bot/profile/".$text.);
+                      $ch1 = curl_init("https://api.line.me/v2/bot/profile/".$text);
                       fwrite($file , var_export($ch1,true));
                       fclose($file);
                       curl_setopt($ch1, CURLOPT_CUSTOMREQUEST, "GET");
