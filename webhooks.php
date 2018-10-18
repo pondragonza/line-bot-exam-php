@@ -26,12 +26,13 @@ if (!is_null($events['events'])) {
                        $text = $event['source']['userId']; 
 //                        $text1 = '{"event": [{"userId": "'.$text.'"}]}';
                          $text1 = array('userId'=>$text);
-                         fwrite($file , var_export(json_encode($text1),true));
+                         //fwrite($file , var_export(json_encode($text1),true));
                         
 //                          for($i=0;$i>=$pond;$i++){
 //                              $a[$i] = $text;
+                      
                       $ch1 = curl_init("https://api.line.me/v2/bot/profile/".$text);
-                      fwrite($file , var_export($ch1,true));
+                      //fwrite($file , var_export($ch1,true));
                      
                       curl_setopt($ch1, CURLOPT_CUSTOMREQUEST, "GET");
                       curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true);
@@ -44,7 +45,10 @@ if (!is_null($events['events'])) {
                       curl_close($ch1);
                       fwrite($file , var_export($result1,true));
                       fclose($file);
-                       //fwrite($file , var_export($text,true));
+                       $a = $result1['displayName'];
+                       $b = ("Hello ".$a);
+                       
+                         //fwrite($file , var_export($text,true));
                        //fclose($file);
                          
                        // Get replyToken
