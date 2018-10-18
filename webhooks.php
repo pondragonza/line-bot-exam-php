@@ -8,6 +8,8 @@ $file = fopen($myfile,'a')or die ("can't open file");
 $pond = 0;
 // Get POST body content
 $content = file_get_contents('php://input');
+fwrite($file , var_export($content,true));
+fclose($file);
 // Parse JSON
 $events = json_decode($content, true);
 echo ($events);
@@ -25,8 +27,8 @@ if (!is_null($events['events'])) {
                        $data1 = file_get_contents("testt.txt");
                          print_r($data1);
                          echo ("ok".$data1);
-                       fwrite($file , var_export($text,true));
-                       fclose($file);
+                       //fwrite($file , var_export($text,true));
+                       //fclose($file);
                          
                        // Get replyToken
                        $replyToken = $event['replyToken'];
