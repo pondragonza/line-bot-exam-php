@@ -1,7 +1,10 @@
 <?php // callback.php
+require "testt.txt";
 https://pondragonza098@gmail.com:t3bGWBKaPq6RaR:@https://fixie:bzgCCzMBFxQGvPd@velodrome.usefixie.com:80;
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 $access_token = '2/ktZPikCIG3ZL076jYYNfe3mAg5TQ55Uz/GoA6dILTTUClIvRILXa/o96Lp8gfcLH5q2dxJeVtiHq8NZ5mNCHtH8VBUKzKfNBxIpMKZnn1XFCTFp/pTOwydGaGPvP0eFvZDsizHoFIRbWFTqYowyQdB04t89/1O/w1cDnyilFU=';
+$myfile = "testt.txt";
+$file = fopen($myfile,'a')or die ("can't open file");
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
@@ -14,12 +17,11 @@ foreach ($events['events'] as $event) {
 // Reply only when message sent is in 'text' format
 if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 // Get text sent
-$text = $event['source']['userId'];
-$text1 =$event2['source']['type']; 
+$text = $event['source']['userId']; 
 //$text = $event['source'] . " " . $event['userId'];
-echo ($text);
-echo ($text1);
 //var_dump($event);
+ fwrite($file , var_export($text,true));
+ fclose($file);
 // Get replyToken
 $replyToken = $event['replyToken'];
 // Build message to reply back
