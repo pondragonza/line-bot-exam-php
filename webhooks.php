@@ -24,6 +24,7 @@ if (!is_null($events['events'])) {
                                    
                        $data1 = file_get_contents("testt.txt");
                          print_r($data1);
+                         echo ("ok".$data1);
                        fwrite($file , var_export($text,true));
                        fclose($file);
                          
