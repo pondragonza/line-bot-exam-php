@@ -18,7 +18,7 @@ foreach ($events['events'] as $event) {
 fwrite($file , var_export($events['events'],true));
 fclose($file);
 // Reply only when message sent is in 'text' format
-if ($event['type'] == 'follow' && $event['message']['type'] == 'text') {
+if ($event['type'] == 'follow'); //&& $event['message']['type'] == 'text') {
 // Get text sent
 $text = $event['source']['userId'];
 // Get replyToken
