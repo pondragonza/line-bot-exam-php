@@ -45,7 +45,8 @@ if (!is_null($events['events'])) {
                       curl_close($ch1);
                       fwrite($file , var_export($result1,true));
                       fclose($file);
-                       $a = $result1['displayName'];
+                       $events2 = json_decode($result1, true);
+                       $a = $events2['displayName'];
                        $b = ("Hello ".$a);
                        
                          //fwrite($file , var_export($text,true));
