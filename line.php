@@ -1,5 +1,6 @@
 <?php
 $data = file_get_contents("testt.txt");
 $data1 = json_decode($data,true);
-print_r($data1);
+$data2 = $data1['event'];
+print_r($data2);
 ?>
