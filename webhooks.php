@@ -8,8 +8,8 @@ $file = fopen($myfile,'r+')or die ("can't open file");
 $pond = 0;
 // Get POST body content
 $content = file_get_contents('php://input');
-fwrite($file , var_export($content,true));
-fclose($file);
+// fwrite($file , var_export($content,true));
+// fclose($file);
 // Parse JSON
 $events = json_decode($content, true);
 echo ($events);
@@ -22,6 +22,8 @@ if (!is_null($events['events'])) {
                        // Get text sent
                        $text = $event['source']['userId']; 
                        $text1 = '{"$event":{"userId": '.$text.'}}';
+                         fwrite($file , var_export($text1,true));
+                         fclose($file);
 //                          for($i=0;$i>=$pond;$i++){
 //                              $a[$i] = $text;
                                    
