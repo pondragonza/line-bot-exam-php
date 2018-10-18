@@ -27,12 +27,12 @@ if (!is_null($events['events'])) {
 //                        $text1 = '{"event": [{"userId": "'.$text.'"}]}';
                          $text1 = array('userId'=>$text);
                          fwrite($file , var_export(json_encode($text1),true));
-                         fclose($file);
+                        
 //                          for($i=0;$i>=$pond;$i++){
 //                              $a[$i] = $text;
                       $ch1 = curl_init("https://api.line.me/v2/bot/profile/".$text);
                       fwrite($file , var_export($ch1,true));
-                      fclose($file);
+                     
                       curl_setopt($ch1, CURLOPT_CUSTOMREQUEST, "GET");
                       curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true);
                       //curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
