@@ -9,6 +9,8 @@ $file = fopen($myfile,'r+')or die ("can't open file");
 
 // Get POST body content
 $content = file_get_contents('php://input');
+ fwrite($file , var_export($content,true));
+ fclose($file);
 // Parse JSON
 $events = json_decode($content, true);
 // Validate parsed JSON data
@@ -20,8 +22,8 @@ if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 // Get text sent
 $text = $event['source']['userId'];
 // Get replyToken
-  fwrite($file , var_export($text,true));
-  fclose($file);
+  //fwrite($file , var_export($text,true));
+  //fclose($file);
 $replyToken = $event['replyToken'];
 // Build message to reply back
 $messages = [
