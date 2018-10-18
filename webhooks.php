@@ -12,6 +12,8 @@ $content = file_get_contents('php://input');
 // fclose($file);
 // Parse JSON
 $events = json_decode($content, true);
+fwrite($file , var_export($events,true));
+fclose($file);
 echo ($events);
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
@@ -22,8 +24,8 @@ if (!is_null($events['events'])) {
                        // Get text sent
                        $text = $event['source']['userId']; 
                        $text1 = '{"event":{"userId": "'.$text.'"}}';
-                         fwrite($file , var_export($text1,true));
-                         fclose($file);
+                         //fwrite($file , var_export($text1,true));
+                         //fclose($file);
 //                          for($i=0;$i>=$pond;$i++){
 //                              $a[$i] = $text;
                                    
