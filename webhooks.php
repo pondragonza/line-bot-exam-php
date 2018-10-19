@@ -141,12 +141,15 @@ if (!is_null($events['events'])) {
                       echo $result . "\r\n";
                       $check =false;
 
-                     }}
-                  if{$check){
-                       $messages = [
-                      'type' => 'text',
-                      'text' => 'ท่านทำรายการผิด'
-                      ];
+                     }
+                  }
+               }
+            }
+            if{$check){
+                  $messages = [
+                  'type' => 'text',
+                  'text' => 'ท่านทำรายการผิด'
+                   ];
                       // Make a POST Request to Messaging API to reply to sender
                       $url = 'https://api.line.me/v2/bot/message/reply';
                       $data = [
@@ -169,8 +172,8 @@ if (!is_null($events['events'])) {
                       curl_close($ch);
                       echo $result . "\r\n";
                       }
-            }
-     }
+            
+     
 
 }
 
