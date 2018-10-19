@@ -98,7 +98,7 @@ if (!is_null($events['events'])) {
                       $name = file_get_contents('name.txt');
                       $name2 = json_decode($name);
 //                      for ($i=0;$i<=1;$i++){ 
-                     if($oud == $name2[0] or $oud == $name2[1] ){
+                     if(($oud == $name2[0]) or ($oud == $name2[1])){
 //                       $file1 = fopen($myfile1,'r+')or die ("can't open file");
 //                       fwrite($file1 , print_r($name2[0],true));
 //                       fclose($file1);
@@ -140,7 +140,7 @@ if (!is_null($events['events'])) {
                       curl_close($ch);
                       echo $result . "\r\n";
                       $check =false;
-//                      }
+
                }
                   if{$check){
                        $messages = [
