@@ -12,7 +12,9 @@ require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 $access_token = '2/ktZPikCIG3ZL076jYYNfe3mAg5TQ55Uz/GoA6dILTTUClIvRILXa/o96Lp8gfcLH5q2dxJeVtiHq8NZ5mNCHtH8VBUKzKfNBxIpMKZnn1XFCTFp/pTOwydGaGPvP0eFvZDsizHoFIRbWFTqYowyQdB04t89/1O/w1cDnyilFU=';
 $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 $myfile = "testt.txt";
+$myfile = "mess.txt";
 $file = fopen($myfile,'a')or die ("can't open file");
+$file1 = fopen($myfile1,'a')or die ("can't open file");
 $pond = 0;
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -51,7 +53,7 @@ if (!is_null($events['events'])) {
 //                       fclose($file);
                        $events2 = json_decode($result1, true);
                        $a = $events2['displayName'];
-                       $b = ("Hello ".$a." กรุณาพิมพ์ 1 เพื่อทำการใส่ชื่อซึ้งข้อมูล");
+                       $b = ("Hello ".$a." กรุณาพิมพ์ 1 เว้นวรรคและตามด้วยชื่อเพื่อทำการซึ้งข้อมูล");
                        
 
                        $replyToken = $event['replyToken'];
@@ -90,42 +92,25 @@ if (!is_null($events['events'])) {
           foreach ($events['events'] as $event) {
                // Reply only when message sent is in 'text' format
                if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+                      fwrite($file , var_export($content1,true));
+                      fclose($file);
                        // Get text sent
                        $text = $event['source']['userId']; 
 //                        $text1 = '{"event": [{"userId": "'.$text.'"}]}';
-                         $text1 = array('userId'=>$text);
+//                          $text1 = array('userId'=>$text);
                          //fwrite($file , var_export(json_encode($text1),true));
                         
 //                          for($i=0;$i>=$pond;$i++){
 //                              $a[$i] = $text;
                       
-                      $ch1 = curl_init("https://api.line.me/v2/bot/profile/".$text);
-                      //fwrite($file , var_export($ch1,true));
-                     
-                      curl_setopt($ch1, CURLOPT_CUSTOMREQUEST, "GET");
-                      curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true);
-                      //curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-                      curl_setopt($ch1, CURLOPT_HTTPHEADER, $headers);
-                      curl_setopt($ch1, CURLOPT_FOLLOWLOCATION, 1);
-                      curl_setopt($ch1, CURLOPT_PROXY, $proxy);
-                      curl_setopt($ch1, CURLOPT_PROXYUSERPWD, $proxyauth);
-                      $result1 = curl_exec($ch1);
-                      curl_close($ch1);
-                      fwrite($file , var_export($result1,true));
-                      fclose($file);
-                       $events2 = json_decode($result1, true);
-                       $a = $events2['displayName'];
-                       $b = ("Hello ".$a);
-                       
-                         //fwrite($file , var_export($text,true));
-                       //fclose($file);
-                         
+
+
                        // Get replyToken
                        $replyToken = $event['replyToken'];
                       // Build message to reply back
                       $messages = [
                       'type' => 'text',
-                      'text' => $b
+                      'text' => 'ซิ้งเรียบร้อย'
                       ];
                       // Make a POST Request to Messaging API to reply to sender
                       $url = 'https://api.line.me/v2/bot/message/reply';
@@ -136,7 +121,7 @@ if (!is_null($events['events'])) {
                        echo ($data);
                       $post = json_encode($data);
                        echo($post);
-//                       $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+                      $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
                       $ch = curl_init($url);
                       curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
                       curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
