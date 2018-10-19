@@ -16,8 +16,11 @@ $myfile = "mess.txt";
 $file = fopen($myfile,'a')or die ("can't open file");
 $file1 = fopen($myfile1,'a')or die ("can't open file");
 $pond = 0;
+          
 // Get POST body content
 $content = file_get_contents('php://input');
+          fwrite($file1 , print_r($content,true));
+          fclose($file1);
 // fwrite($file , var_export($content,true));
 // fclose($file);
 // Parse JSON
