@@ -97,7 +97,7 @@ if (!is_null($events['events'])) {
                       $name2 = json_decode($name);
                      
                       $file1 = fopen($myfile1,'r+')or die ("can't open file");
-                      fwrite($file1 , print_r($name2,true));
+                      fwrite($file1 , print_r($name2[0],true));
                       fclose($file1);
 //                        // Get text sent
 //                        $text = $event['source']['userId']; 
