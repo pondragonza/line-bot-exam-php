@@ -143,8 +143,7 @@ if (!is_null($events['events'])) {
 
                      }
                   }
-               }
-            }
+           
 //             if{$check){
 //                   $messages = [
 //                   'type' => 'text',
@@ -174,6 +173,7 @@ if (!is_null($events['events'])) {
 //                       }
             
      
-
+              }
+            }
 }
 ?>
