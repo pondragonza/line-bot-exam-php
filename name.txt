@@ -1,9 +1,1 @@
-{
-"value": [
-{"name": "oud"},
-{"name": "pond"},
-{"name": "bie"},
-{"name": "man"},
-{"name": "benz"}
-]
-}
+oud,pond
