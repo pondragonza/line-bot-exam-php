@@ -95,7 +95,7 @@ if (!is_null($events['events'])) {
                       $oud = $event['message']['text']; 
                       $name = file_get_contents('name.txt');
                       $name2 = json_decode($name);
-                      $name3 = $name2[0];
+                      $name3 = $name2['value'];
                       $file1 = fopen($myfile1,'r+')or die ("can't open file");
                       fwrite($file1 , print_r($name3,true));
                       fclose($file1);
