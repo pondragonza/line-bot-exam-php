@@ -15,6 +15,7 @@ $myfile = "testt.txt";
 $myfile1 = "mess.txt";
 $file = fopen($myfile,'a')or die ("can't open file");
 $pond = 0;
+$check = true;
           
 // Get POST body content
 $content = file_get_contents('php://input');
@@ -88,6 +89,7 @@ if (!is_null($events['events'])) {
                       $result = curl_exec($ch);
                       curl_close($ch);
                       echo $result . "\r\n";
+                      
                 }
 
                // Reply only when message sent is in 'text' format
@@ -136,9 +138,11 @@ if (!is_null($events['events'])) {
                       curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
                       $result = curl_exec($ch);
                       curl_close($ch);
-                      echo $result . "\r\n";
+                      echo $result . "\r\n"
+                      $check =false;
 //                      }
-               }else{
+               }
+                  if{$check){
                        $messages = [
                       'type' => 'text',
                       'text' => 'ท่านทำรายการผิด'
@@ -164,6 +168,7 @@ if (!is_null($events['events'])) {
                       $result = curl_exec($ch);
                       curl_close($ch);
                       echo $result . "\r\n";
+                  }
             }
      }
 
