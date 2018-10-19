@@ -59,7 +59,7 @@ if (!is_null($events['events'])) {
 //                       fclose($file1);
                        $events2 = json_decode($result1, true);
                        $a = $events2['displayName'];
-                       $b = ("Hello ".$a." กรุณาพิมพ์ 1 เว้นวรรคและตามด้วยชื่อเพื่อทำการบันทึกข้อมูล")
+                       $b = ("Hello ".$a." กรุณาพิมพ์ 1 เว้นวรรคและตามด้วยชื่อเพื่อทำการบันทึกข้อมูล");
                        $replyToken = $event['replyToken'];
                       // Build message to reply back
                       $messages = [
