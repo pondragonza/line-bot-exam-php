@@ -95,10 +95,11 @@ if (!is_null($events['events'])) {
                       $oud = $event['message']['text']; 
                       $name = file_get_contents('name.txt');
                       $name2 = json_decode($name);
-                     
-                      $file1 = fopen($myfile1,'r+')or die ("can't open file");
-                      fwrite($file1 , print_r($name2[0],true));
-                      fclose($file1);
+                     for ($i=0;$i<=1;$i++){ 
+                     if($oud == $name2[$i] ){
+//                       $file1 = fopen($myfile1,'r+')or die ("can't open file");
+//                       fwrite($file1 , print_r($name2[0],true));
+//                       fclose($file1);
 //                        // Get text sent
 //                        $text = $event['source']['userId']; 
 //                        $text1 = '{"event": [{"userId": "'.$text.'"}]}';
@@ -136,32 +137,32 @@ if (!is_null($events['events'])) {
                       $result = curl_exec($ch);
                       curl_close($ch);
                       echo $result . "\r\n";
-//                }else{
-//                        $messages = [
-//                       'type' => 'text',
-//                       'text' => 'ท่านทำรายการผิด'
-//                       ];
-//                       // Make a POST Request to Messaging API to reply to sender
-//                       $url = 'https://api.line.me/v2/bot/message/reply';
-//                       $data = [
-//                       'replyToken' => $replyToken,
-//                       'messages' => [$messages],
-//                       ];
-//                        echo ($data);
-//                       $post = json_encode($data);
-//                        echo($post);
-//                       $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
-//                       $ch = curl_init($url);
-//                       curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-//                       curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-//                       curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-//                       curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-//                       curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-//                       curl_setopt($ch, CURLOPT_PROXY, $proxy);
-//                       curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
-//                       $result = curl_exec($ch);
-//                       curl_close($ch);
-//                       echo $result . "\r\n";
+                     }}else{
+                       $messages = [
+                      'type' => 'text',
+                      'text' => 'ท่านทำรายการผิด'
+                      ];
+                      // Make a POST Request to Messaging API to reply to sender
+                      $url = 'https://api.line.me/v2/bot/message/reply';
+                      $data = [
+                      'replyToken' => $replyToken,
+                      'messages' => [$messages],
+                      ];
+                       echo ($data);
+                      $post = json_encode($data);
+                       echo($post);
+                      $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+                      $ch = curl_init($url);
+                      curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+                      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                      curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+                      curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+                      curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+                      curl_setopt($ch, CURLOPT_PROXY, $proxy);
+                      curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
+                      $result = curl_exec($ch);
+                      curl_close($ch);
+                      echo $result . "\r\n";
             }
      }
 
