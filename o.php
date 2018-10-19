@@ -3,5 +3,6 @@
                       $name2 = json_decode($name);
 // $myArr = array("John", "Mary", "Peter", "Sally");
 // //$myJSON = json_encode($myArr[0]);
-// echo $myArr[0];
+ echo $name2;
+  echo $name2[0];
 ?>
