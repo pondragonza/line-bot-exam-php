@@ -126,11 +126,37 @@ if (!is_null($events['events'])) {
 
                                 }
                    }
-                   if (check_1){
+                   if (check == 0){
                                 $file1 = fopen($myfile1,'a')or die ("can't open file");
                                 fwrite($file1 , print_r("ssssss",true));
                                 fclose($file1);
-                        
+                                 $replyToken = $event['replyToken'];
+                                $messages = [
+                                'type' => 'text',
+                                'text' => 'ทำรายการผิดพลาด'
+                                ];
+                                $url = 'https://api.line.me/v2/bot/message/reply';
+                                $data = [
+                                'replyToken' => $replyToken,
+                                'messages' => [$messages],
+                                ];
+                                 echo ($data);
+                                $post = json_encode($data);
+                                 echo($post);
+                                $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+                                $ch = curl_init($url);
+                                curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+                                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                                curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+                                curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+                                curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+                                curl_setopt($ch, CURLOPT_PROXY, $proxy);
+                                curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
+                                $result = curl_exec($ch);
+                                curl_close($ch);
+                                echo $result . "\r\n";
+                                $check = 1;
+
                    }          
               }
         }
