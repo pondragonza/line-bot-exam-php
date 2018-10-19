@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>oud and pond design</title>
-<meta http-equiv=Content-Type content="text/html; charset=tis-620">
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
 </head>
 <body>
 
@@ -141,7 +141,7 @@ if (!is_null($events['events'])) {
                       echo $result . "\r\n";
                       $check =false;
 
-               }
+                     }
                   if{$check){
                        $messages = [
                       'type' => 'text',
@@ -168,7 +168,7 @@ if (!is_null($events['events'])) {
                       $result = curl_exec($ch);
                       curl_close($ch);
                       echo $result . "\r\n";
-                  }
+                      }
             }
      }
 
