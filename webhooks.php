@@ -94,7 +94,7 @@ if (!is_null($events['events'])) {
                if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
                       $oud = $event['message']['text']; 
                       $name = file_get_contents('name.txt');
-                      $name2 = json_decode($name['value']);
+                      $name2 = json_decode($name);
                       $file1 = fopen($myfile1,'r+')or die ("can't open file");
                       fwrite($file1 , print_r($name2,true));
                       fclose($file1);
