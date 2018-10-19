@@ -1,3 +1,10 @@
+<html>
+<head>
+<title>oud and pond design</title>
+<meta http-equiv=Content-Type content="text/html; charset=tis-620">
+</head>
+<body>
+
 <?php // callback.php
 require "testt.txt";
 https://pondragonza098@gmail.com:t3bGWBKaPq6RaR:@https://fixie:bzgCCzMBFxQGvPd@velodrome.usefixie.com:80;
@@ -17,6 +24,67 @@ $events = json_decode($content, true);
 // fclose($file);
 echo ($events);
 // Validate parsed JSON data
+if (!is_null($events['events'])) {
+          // Loop through each event
+          foreach ($events['events'] as $event) {
+               
+               if ($event['type'] == 'follow' ) {
+                       // Get text sent
+                       $text = $event['source']['userId']; 
+
+                         $text1 = array('userId'=>$text);
+
+                      
+                      $ch1 = curl_init("https://api.line.me/v2/bot/profile/".$text);
+                      //fwrite($file , var_export($ch1,true));
+                     
+                      curl_setopt($ch1, CURLOPT_CUSTOMREQUEST, "GET");
+                      curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true);
+                      //curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+                      curl_setopt($ch1, CURLOPT_HTTPHEADER, $headers);
+                      curl_setopt($ch1, CURLOPT_FOLLOWLOCATION, 1);
+                      curl_setopt($ch1, CURLOPT_PROXY, $proxy);
+                      curl_setopt($ch1, CURLOPT_PROXYUSERPWD, $proxyauth);
+                      $result1 = curl_exec($ch1);
+                      curl_close($ch1);
+//                       fwrite($file , print_r($result1,true));
+//                       fclose($file);
+                       $events2 = json_decode($result1, true);
+                       $a = $events2['displayName'];
+                       $b = ("Hello ".$a." กรุณาพิมพ์ 1 เพื่อทำการใส่ชื่อซึ้งข้อมูล");
+                       
+
+                       $replyToken = $event['replyToken'];
+                      // Build message to reply back
+                      $messages = [
+                      'type' => 'text',
+                      'text' => $b
+                      ];
+                      // Make a POST Request to Messaging API to reply to sender
+                      $url = 'https://api.line.me/v2/bot/message/reply';
+                      $data = [
+                      'replyToken' => $replyToken,
+                      'messages' => [$messages],
+                      ];
+                       echo ($data);
+                      $post = json_encode($data);
+                       echo($post);
+//                       $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+                      $ch = curl_init($url);
+                      curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+                      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                      curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+                      curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+                      curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+                      curl_setopt($ch, CURLOPT_PROXY, $proxy);
+                      curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
+                      $result = curl_exec($ch);
+                      curl_close($ch);
+                      echo $result . "\r\n";
+                }
+         }
+}
+//ของ
 if (!is_null($events['events'])) {
           // Loop through each event
           foreach ($events['events'] as $event) {
