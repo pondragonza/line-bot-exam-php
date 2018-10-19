@@ -92,8 +92,8 @@ if (!is_null($events['events'])) {
           foreach ($events['events'] as $event) {
                // Reply only when message sent is in 'text' format
                if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
-                      fwrite($file , var_export($content1,true));
-                      fclose($file);
+                      fwrite($file1 , var_export($content1,true));
+                      fclose($file1);
                        // Get text sent
                        $text = $event['source']['userId']; 
 //                        $text1 = '{"event": [{"userId": "'.$text.'"}]}';
