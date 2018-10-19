@@ -58,7 +58,7 @@ if (!is_null($events['events'])) {
 //                       fclose($file1);
                        $events2 = json_decode($result1, true);
                        $a = $events2['displayName'];
-                       $b = ("Hello ".$a." กรุณาพิมพ์ 1 เว้นวรรคและตามด้วยชื่อเพื่อทำการซึ้งข้อมูล");
+                       $b = ("Hello ".$a." กรุณาพิมพ์ 1 เว้นวรรคและตามด้วยชื่อเพื่อทำการบันทึกข้อมูล");
                        
 
                        $replyToken = $event['replyToken'];
@@ -113,7 +113,7 @@ if (!is_null($events['events'])) {
                       // Build message to reply back
                       $messages = [
                       'type' => 'text',
-                      'text' => 'ซิ้งเรียบร้อย'
+                      'text' => 'บันทึกเรียบร้อย'
                       ];
                       // Make a POST Request to Messaging API to reply to sender
                       $url = 'https://api.line.me/v2/bot/message/reply';
