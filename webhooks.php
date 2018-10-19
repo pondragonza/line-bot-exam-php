@@ -140,7 +140,7 @@ if (!is_null($events['events'])) {
                       $check = 1;
 
                      }
-                  }
+                  
            
                       if{$check == 0){
                                 $messages = [
