@@ -92,7 +92,7 @@ if (!is_null($events['events'])) {
 
                // Reply only when message sent is in 'text' format
                if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
-                      $oud = $event['message']; 
+                      $oud = $event['message']['text']; 
                       $file1 = fopen($myfile1,'r+')or die ("can't open file");
                       fwrite($file1 , var_export($oud,true));
                       fclose($file1);
