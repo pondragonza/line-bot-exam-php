@@ -54,8 +54,8 @@ if (!is_null($events['events'])) {
 //                       fwrite($file , print_r($result1,true));
 //                       fclose($file);
                        $file1 = fopen($myfile1,'r+')or die ("can't open file");
-                      fwrite($file1 , print_r($result1,true));
-                      fclose($file1);
+//                       fwrite($file1 , print_r($result1,true));
+//                       fclose($file1);
                        $events2 = json_decode($result1, true);
                        $a = $events2['displayName'];
                        $b = ("Hello ".$a." กรุณาพิมพ์ 1 เว้นวรรคและตามด้วยชื่อเพื่อทำการซึ้งข้อมูล");
@@ -92,5 +92,51 @@ if (!is_null($events['events'])) {
          }
 }
 //ของ
+ // Loop through each event
+          foreach ($events['events'] as $event) {
+               // Reply only when message sent is in 'text' format
+               if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+                      fwrite($file1 , var_export($content1,true));
+                      fclose($file1);
+                       // Get text sent
+                       $text = $event['source']['userId']; 
+//                        $text1 = '{"event": [{"userId": "'.$text.'"}]}';
+//                          $text1 = array('userId'=>$text);
+                         //fwrite($file , var_export(json_encode($text1),true));
+                        
+//                          for($i=0;$i>=$pond;$i++){
+//                              $a[$i] = $text;
+                      
+                        // Get replyToken
+                       $replyToken = $event['replyToken'];
+                      // Build message to reply back
+                      $messages = [
+                      'type' => 'text',
+                      'text' => 'ซิ้งเรียบร้อย'
+                      ];
+                      // Make a POST Request to Messaging API to reply to sender
+                      $url = 'https://api.line.me/v2/bot/message/reply';
+                      $data = [
+                      'replyToken' => $replyToken,
+                      'messages' => [$messages],
+                      ];
+                       echo ($data);
+                      $post = json_encode($data);
+                       echo($post);
+                      $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+                      $ch = curl_init($url);
+                      curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+                      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                      curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+                      curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+                      curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+                      curl_setopt($ch, CURLOPT_PROXY, $proxy);
+                      curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
+                      $result = curl_exec($ch);
+                      curl_close($ch);
+                      echo $result . "\r\n";
+                }
+         }
+}
 
 
