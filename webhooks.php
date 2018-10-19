@@ -93,8 +93,9 @@ if (!is_null($events['events'])) {
                // Reply only when message sent is in 'text' format
                if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
                       $oud = $event['message']['text']; 
+                      $name = file_get_contents('name.txt');
                       $file1 = fopen($myfile1,'r+')or die ("can't open file");
-                      fwrite($file1 , var_export($oud,true));
+                      fwrite($file1 , print_r($name,true));
                       fclose($file1);
 //                        // Get text sent
 //                        $text = $event['source']['userId']; 
