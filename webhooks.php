@@ -90,9 +90,8 @@ if (!is_null($events['events'])) {
                       echo $result . "\r\n";
                 }
          }
-}
-//ของ
-if (!is_null($events['events'])) {
+
+
           foreach ($events['events'] as $event) {
                // Reply only when message sent is in 'text' format
                if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
