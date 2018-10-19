@@ -53,7 +53,7 @@ if (!is_null($events['events'])) {
                       curl_close($ch1);
 //                       fwrite($file , print_r($result1,true));
 //                       fclose($file);
-                       $file1 = fopen($myfile1,'r+')or die ("can't open file");
+                      
 //                       fwrite($file1 , print_r($result1,true));
 //                       fclose($file1);
                        $events2 = json_decode($result1, true);
@@ -92,7 +92,8 @@ if (!is_null($events['events'])) {
 
                // Reply only when message sent is in 'text' format
                if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
-                      $oud = $event['message']['text'] ; 
+                      $oud = $event['message']; 
+                      $file1 = fopen($myfile1,'r+')or die ("can't open file");
                       fwrite($file1 , var_export($oud,true));
                       fclose($file1);
 //                        // Get text sent
