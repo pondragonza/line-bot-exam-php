@@ -14,13 +14,12 @@ $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $a
 $myfile = "testt.txt";
 $myfile = "mess.txt";
 $file = fopen($myfile,'a')or die ("can't open file");
-$file1 = fopen($myfile1,'a')or die ("can't open file");
 $pond = 0;
           
 // Get POST body content
 $content = file_get_contents('php://input');
-          fwrite($file1 , print_r($content,true));
-          fclose($file1);
+          fwrite($file , print_r($content,true));
+          fclose($file);
 // fwrite($file , var_export($content,true));
 // fclose($file);
 // Parse JSON
@@ -54,6 +53,9 @@ if (!is_null($events['events'])) {
                       curl_close($ch1);
 //                       fwrite($file , print_r($result1,true));
 //                       fclose($file);
+                       $file1 = fopen($myfile1,'r+')or die ("can't open file");
+                      fwrite($file1 , print_r($result1,true));
+                      fclose($file1);
                        $events2 = json_decode($result1, true);
                        $a = $events2['displayName'];
                        $b = ("Hello ".$a." กรุณาพิมพ์ 1 เว้นวรรคและตามด้วยชื่อเพื่อทำการซึ้งข้อมูล");
