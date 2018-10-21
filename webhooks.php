@@ -19,8 +19,7 @@ $check = 0;
           
 // Get POST body content
 $content = file_get_contents('php://input');
-          fwrite($file , print_r($content,true));
-          fclose($file);
+
 // fwrite($file , var_export($content,true));
 // fclose($file);
 // Parse JSON
