@@ -13,7 +13,7 @@ $access_token = '2/ktZPikCIG3ZL076jYYNfe3mAg5TQ55Uz/GoA6dILTTUClIvRILXa/o96Lp8gf
 $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 $myfile = "testt.txt";
 $myfile1 = "mess.txt";
-$file = fopen($myfile,'a')or die ("can't open file");
+$file = fopen($myfile,'r+')or die ("can't open file");
 $pond = 0;
 $check = 0;
           
