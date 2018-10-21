@@ -54,8 +54,8 @@ if (!is_null($events['events'])) {
                       fwrite($file , print_r($result1,true));
                       fclose($file);
                       
-                      fwrite($file1 , print_r($result1,true));
-                      fclose($file1);
+//                       fwrite($file1 , print_r($result1,true));
+//                       fclose($file1);
                        $events2 = json_decode($result1, true);
                        $a = $events2['displayName'];
                        $b = ("Hello ".$a." กรุณาพิมพ์ 1 เว้นวรรคและตามด้วยชื่อเพื่อทำการบันทึกข้อมูล");
