@@ -13,7 +13,7 @@ $access_token = '2/ktZPikCIG3ZL076jYYNfe3mAg5TQ55Uz/GoA6dILTTUClIvRILXa/o96Lp8gf
 $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 $myfile = "testt.txt";
 $myfile1 = "mess.txt";
-$file = fopen($myfile,'r+')or die ("can't open file");
+$file = fopen($myfile,'w+')or die ("can't open file");
 $pond = 0;
 $check = 0;
           
@@ -92,7 +92,7 @@ if (!is_null($events['events'])) {
                // Reply only when message sent is in 'text' format
                if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
                       $dataa = $event;
-                      $file1 = fopen($myfile1,'r+')or die ("can't open file");
+                      $file1 = fopen($myfile1,'w+')or die ("can't open file");
                       fwrite($file1 , print_r(json_encode($dataa),true));
                       fclose($file1);   
                       $oud = $event['message']['text']; 
