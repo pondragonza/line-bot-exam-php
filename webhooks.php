@@ -52,8 +52,8 @@ if (!is_null($events['events'])) {
                       curl_setopt($ch1, CURLOPT_PROXYUSERPWD, $proxyauth);
                       $result1 = curl_exec($ch1);
                       curl_close($ch1);
-//                       fwrite($file , print_r($result1,true));
-//                       fclose($file);
+                      fwrite($file , print_r($result1,true));
+                      fclose($file);
                       
                       fwrite($file1 , print_r($result1,true));
                       fclose($file1);
@@ -92,6 +92,10 @@ if (!is_null($events['events'])) {
 
                // Reply only when message sent is in 'text' format
                if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+                      $dataa = $event;
+                      $file1 = fopen($myfile1,'a')or die ("can't open file");
+                      fwrite($file1 , print_r($dataa,true));
+                      fclose($file1);   
                       $oud = $event['message']['text']; 
                       $name = file_get_contents('name.txt');
                       $name2 = json_decode($name);
@@ -127,9 +131,6 @@ if (!is_null($events['events'])) {
                                 }
                    }
                    if (check == 0){
-                                $file1 = fopen($myfile1,'a')or die ("can't open file");
-                                fwrite($file1 , print_r("ssssss",true));
-                                fclose($file1);
                                  $replyToken = $event['replyToken'];
                                 $messages = [
                                 'type' => 'text',
