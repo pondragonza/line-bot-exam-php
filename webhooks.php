@@ -52,7 +52,7 @@ if (!is_null($events['events'])) {
                       $result1 = curl_exec($ch1);
                       curl_close($ch1);
                       fwrite($file , print_r($result1,true));
-                      fclose($file);
+                      
                       
 //                       fwrite($file1 , print_r($result1,true));
 //                       fclose($file1);
