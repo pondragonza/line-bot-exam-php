@@ -103,7 +103,7 @@ if (!is_null($events['events'])) {
                                 $replyToken = $event['replyToken'];
                                 $messages = [
                                 'type' => 'text',
-                                'text' => 'บันทึกเรียบร้อย'
+                                'text' => 'เริ่มการทำงานของ line notify'
                                 ];
                                 $url = 'https://api.line.me/v2/bot/message/reply';
                                 $data = [
