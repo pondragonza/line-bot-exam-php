@@ -58,7 +58,7 @@ if (!is_null($events['events'])) {
 //                       fclose($file1);
                        $events2 = json_decode($result1, true);
                        $a = $events2['displayName'];
-                       $b = ("Hello ".$a." กรุณาพิมพ์ 1 เว้นวรรคและตามด้วยชื่อเพื่อทำการบันทึกข้อมูล");
+                       $b = ("Hello ".$a." พิมพ์ 1 เพื่อเรียกใช้ฟังก์ชั่น line notify");
                        $replyToken = $event['replyToken'];
                       // Build message to reply back
                       $messages = [
@@ -133,7 +133,7 @@ if (!is_null($events['events'])) {
                                  $replyToken = $event['replyToken'];
                                 $messages = [
                                 'type' => 'text',
-                                'text' => 'ทำรายการผิดพลาด'
+                                'text' => 'หยุดการทำงาน line notify'
                                 ];
                                 $url = 'https://api.line.me/v2/bot/message/reply';
                                 $data = [
