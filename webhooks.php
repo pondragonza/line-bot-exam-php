@@ -71,10 +71,10 @@ if (!is_null($events['events'])) {
                       'replyToken' => $replyToken,
                       'messages' => [$messages],
                       ];
-                       echo ($data);
+                      echo ($data);
                       $post = json_encode($data);
-                       echo($post);
-                       $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+                      echo($post);
+                      $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
                       $ch = curl_init($url);
                       curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
                       curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -110,9 +110,9 @@ if (!is_null($events['events'])) {
                                 'replyToken' => $replyToken,
                                 'messages' => [$messages],
                                 ];
-                                 echo ($data);
+                                echo ($data);
                                 $post = json_encode($data);
-                                 echo($post);
+                                echo($post);
                                 $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
                                 $ch = curl_init($url);
                                 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
@@ -130,7 +130,7 @@ if (!is_null($events['events'])) {
                                 }
                    }
                    if ($check == 0){
-                                 $replyToken = $event['replyToken'];
+                                $replyToken = $event['replyToken'];
                                 $messages = [
                                 'type' => 'text',
                                 'text' => 'หยุดการทำงาน line notify'
@@ -140,7 +140,7 @@ if (!is_null($events['events'])) {
                                 'replyToken' => $replyToken,
                                 'messages' => [$messages],
                                 ];
-                                 echo ($data);
+                                 echo($data);
                                 $post = json_encode($data);
                                  echo($post);
                                 $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
