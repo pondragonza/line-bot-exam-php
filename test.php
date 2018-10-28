@@ -1,4 +1,5 @@
-   $ch1 = curl_init("https://api.line.me/v2/bot/profile/Uf6071f679024997b537b91a0c8330a20);"//.$text);
+php>   
+$ch1 = curl_init("https://api.line.me/v2/bot/profile/Uf6071f679024997b537b91a0c8330a20);"//.$text);
                       //fwrite($file , var_export($ch1,true));
                      
                       curl_setopt($ch1, CURLOPT_CUSTOMREQUEST, "GET");
@@ -13,3 +14,4 @@
                       $file = fopen($myfile,'w+')or die ("can't open file");
                       fwrite($file , print_r($result1,true));
                       print_r($result1)
+?>
