@@ -39,7 +39,7 @@ if (!is_null($events['events'])) {
                          $text1 = array('userId'=>$text);
                              
                       
-                      $ch1 = curl_init("https://api.line.me/v2/bot/profile/".$text);
+                      $ch1 = curl_init("https://api.line.me/v2/bot/profile/Uf6071f679024997b537b91a0c8330a20);"//.$text);
                       //fwrite($file , var_export($ch1,true));
                      
                       curl_setopt($ch1, CURLOPT_CUSTOMREQUEST, "GET");
