@@ -33,10 +33,11 @@ if (!is_null($events['events'])) {
                
                if ($event['type'] == 'follow' ) {
                        // Get text sent
-                       $text = $event['source']['userId']; 
-
+                      $text = $event['source']['userId']; 
+                      $file = fopen($myfile,'w+')or die ("can't open file");
+                      fwrite($file , print_r($text,true));
                          $text1 = array('userId'=>$text);
-
+                             
                       
                       $ch1 = curl_init("https://api.line.me/v2/bot/profile/".$text);
                       //fwrite($file , var_export($ch1,true));
@@ -50,9 +51,9 @@ if (!is_null($events['events'])) {
                       curl_setopt($ch1, CURLOPT_PROXYUSERPWD, $proxyauth);
                       $result1 = curl_exec($ch1);
                       curl_close($ch1);
-                      $file = fopen($myfile,'w+')or die ("can't open file");
-                      fwrite($file , print_r($result1,true));
-                      fclose($file);
+      //                $file = fopen($myfile,'w+')or die ("can't open file");
+      //                fwrite($file , print_r($result1,true));
+       //               fclose($file);
                       
 //                       fwrite($file1 , print_r($result1,true));
 //                       fclose($file1);
