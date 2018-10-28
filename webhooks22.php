@@ -34,9 +34,9 @@ if (!is_null($events['events'])) {
                      // curl_setopt($ch, CURLOPT_POSTFIELDS, $get);
                       curl_setopt($ch1, CURLOPT_HTTPHEADER, $headers);
                       curl_setopt($ch1, CURLOPT_FOLLOWLOCATION, 1);
-                      $result1 = curl_exec utf8_encode($ch1);
+                      $result1 = curl_exec($ch1);
                       curl_close($ch1);
-		//	$result1 = utf8_encode($result1)
+			$result1 = utf8_encode($result1)
                       $file = fopen($myfile,'w+')or die ("can't open file");
                       fwrite($file , print_r($result1,true));
        //               fclose($file);
