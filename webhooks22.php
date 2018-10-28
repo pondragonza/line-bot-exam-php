@@ -1,6 +1,12 @@
 <?php // callback.php
 require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
+require "testt.txt";
+require "test.php";
+$myfile = "testt.txt";
+$myfile1 = "mess.txt";
+$pond = 0;
+$check = 0;
 $access_token = '2/ktZPikCIG3ZL076jYYNfe3mAg5TQ55Uz/GoA6dILTTUClIvRILXa/o96Lp8gfcLH5q2dxJeVtiHq8NZ5mNCHtH8VBUKzKfNBxIpMKZnn1XFCTFp/pTOwydGaGPvP0eFvZDsizHoFIRbWFTqYowyQdB04t89/1O/w1cDnyilFU=';
 // Get POST body content
 $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
