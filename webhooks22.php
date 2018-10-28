@@ -2,7 +2,7 @@
 require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 require "testt.txt";
-require "test.php";
+require "mess.txt";
 $myfile = "testt.txt";
 $myfile1 = "mess.txt";
 $pond = 0;
@@ -12,6 +12,7 @@ $access_token = '2/ktZPikCIG3ZL076jYYNfe3mAg5TQ55Uz/GoA6dILTTUClIvRILXa/o96Lp8gf
 $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 $content = file_get_contents('php://input');
 // Parse JSON
+
 $events = json_decode($content, true);
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
