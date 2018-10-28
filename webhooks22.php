@@ -17,8 +17,8 @@ if (!is_null($events['events'])) {
          //             fwrite($file , print_r($text,true));
                          $text1 = array('userId'=>$text);
                              
-                      
-                      $ch1 = curl_init("https://api.line.me/v2/bot/profile/.$text);"//.$text);
+                      //$url;
+                      $ch1 = curl_init("https://api.line.me/v2/bot/profile/.$text")//.$text);
                       //fwrite($file , var_export($ch1,true));
                      
                       curl_setopt($ch1, CURLOPT_CUSTOMREQUEST, "GET");
