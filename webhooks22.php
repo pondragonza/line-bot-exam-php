@@ -36,8 +36,8 @@ if (!is_null($events['events'])) {
                       curl_setopt($ch1, CURLOPT_FOLLOWLOCATION, 1);
                       $result1 = curl_exec($ch1);
                       curl_close($ch1);
-                  //    $file = fopen($myfile,'w+')or die ("can't open file");
-                   //   fwrite($file , print_r($result1,true));
+                      $file = fopen($myfile,'w+')or die ("can't open file");
+                      fwrite($file , print_r($result1,true));
        //               fclose($file);
                       
 //                       fwrite($file1 , print_r($result1,true));
@@ -75,9 +75,9 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		  if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
                       $dataa = $event;
-                    //  $file1 = fopen($myfile1,'w+')or die ("can't open file");
-                     // fwrite($file1 , print_r(json_encode($dataa),true));
-                     // fclose($file1);   
+                      $file1 = fopen($myfile1,'w+')or die ("can't open file");
+                      fwrite($file1 , print_r(json_encode($dataa),true));
+                      fclose($file1);   
                       $oud = $event['message']['text']; 
                       $name = file_get_contents('name.txt');
                       $name2 = json_decode($name);
