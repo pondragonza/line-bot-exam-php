@@ -1,10 +1,3 @@
-<html>
-<head>
-<title>oud and pond design</title>
-<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
-</head>
-<body>
-
 <?php // callback.php
 require "testt.txt";
 require "test.php";
