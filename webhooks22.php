@@ -24,7 +24,7 @@ if (!is_null($events['events'])) {
                       curl_setopt($ch1, CURLOPT_CUSTOMREQUEST, "GET");
                       curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true);
                       curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-                      curl_setopt($ch1, CURLOPT_HTTPHEADER, $headers);
+                      //curl_setopt($ch1, CURLOPT_HTTPHEADER, $headers);
                       curl_setopt($ch1, CURLOPT_FOLLOWLOCATION, 1);
                       $result1 = curl_exec($ch1);
                       curl_close($ch1);
