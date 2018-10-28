@@ -14,4 +14,3 @@ $ch1 = curl_init("https://api.line.me/v2/bot/profile/Uf6071f679024997b537b91a0c8
                       $file = fopen($myfile,'w+')or die ("can't open file");
                       fwrite($file , print_r($result1,true));
                       print_r($result1)
-?>
