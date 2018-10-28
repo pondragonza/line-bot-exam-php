@@ -18,25 +18,25 @@ if (!is_null($events['events'])) {
                          $text1 = array('userId'=>$text);
                              
                       
-                      $ch1 = curl_init("https://api.line.me/v2/bot/profile/Uf6071f679024997b537b91a0c8330a20);"//.$text);
+                  //    $ch1 = curl_init("https://api.line.me/v2/bot/profile/Uf6071f679024997b537b91a0c8330a20);"//.$text);
                       //fwrite($file , var_export($ch1,true));
                      
-                      curl_setopt($ch1, CURLOPT_CUSTOMREQUEST, "GET");
-                      curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true);
+                    //  curl_setopt($ch1, CURLOPT_CUSTOMREQUEST, "GET");
+                      //curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true);
                       //curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-                      curl_setopt($ch1, CURLOPT_HTTPHEADER, $headers);
-                      curl_setopt($ch1, CURLOPT_FOLLOWLOCATION, 1);
-                      $result1 = curl_exec($ch1);
-                      curl_close($ch1);
+                      //curl_setopt($ch1, CURLOPT_HTTPHEADER, $headers);
+                      //curl_setopt($ch1, CURLOPT_FOLLOWLOCATION, 1);
+                      //$result1 = curl_exec($ch1);
+                    //  curl_close($ch1);
                      // $file = fopen($myfile,'w+')or die ("can't open file");
                    //   fwrite($file , print_r($result1,true));
        //               fclose($file);
                       
 //                       fwrite($file1 , print_r($result1,true));
 //                       fclose($file1);
-                       $events2 = json_decode($result1, true);
-                       $a = $events2['displayName'];
-                       $b = ("Hello ".$a." พิมพ์ 1 เพื่อเรียกใช้ฟังก์ชั่น line notify");
+                       //$events2 = json_decode($result1, true);
+                      // $a = $events2['displayName'];
+                       $b = ("Hello พิมพ์ 1 เพื่อเรียกใช้ฟังก์ชั่น line notify");
                        $replyToken = $event['replyToken'];
                       // Build message to reply back
                       $messages = [
