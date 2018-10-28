@@ -9,7 +9,7 @@ $pond = 0;
 $check = 0;
 $access_token = '2/ktZPikCIG3ZL076jYYNfe3mAg5TQ55Uz/GoA6dILTTUClIvRILXa/o96Lp8gfcLH5q2dxJeVtiHq8NZ5mNCHtH8VBUKzKfNBxIpMKZnn1XFCTFp/pTOwydGaGPvP0eFvZDsizHoFIRbWFTqYowyQdB04t89/1O/w1cDnyilFU=';
 // Get POST body content
-$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token;charset=utf-8);
 $content = file_get_contents('php://input');
 // Parse JSON
 
@@ -34,8 +34,9 @@ if (!is_null($events['events'])) {
                      // curl_setopt($ch, CURLOPT_POSTFIELDS, $get);
                       curl_setopt($ch1, CURLOPT_HTTPHEADER, $headers);
                       curl_setopt($ch1, CURLOPT_FOLLOWLOCATION, 1);
-                      $result1 = curl_exec($ch1);
+                      $result1 = curl_exec utf8_decode($ch1);
                       curl_close($ch1);
+			$result1 = utf8_encode($result1)
                       $file = fopen($myfile,'w+')or die ("can't open file");
                       fwrite($file , print_r($result1,true));
        //               fclose($file);
