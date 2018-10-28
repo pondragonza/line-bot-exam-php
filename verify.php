@@ -1,7 +1,7 @@
 <?php
 $proxy = 'proxyurl:port';
 $proxyauth = 'username:password';
-$access_token = 'v8ZeLFUyG6JfMw7rYvZybHnI89Q8JABiucAvJ3SU1F/QBkGmt2G30TOENwICIhcmBkHFQ0nbiQLpuYPsmiwRKUXxxJWO/nqWUb+Dm+lmBXKhN6X3z2UTu+xOoGDmC5WeCDQ0zPRLUV/DwE6rmly26AdB04t89/1O/w1cDnyilFU=';
+$access_token = '2/ktZPikCIG3ZL076jYYNfe3mAg5TQ55Uz/GoA6dILTTUClIvRILXa/o96Lp8gfcLH5q2dxJeVtiHq8NZ5mNCHtH8VBUKzKfNBxIpMKZnn1XFCTFp/pTOwydGaGPvP0eFvZDsizHoFIRbWFTqYowyQdB04t89/1O/w1cDnyilFU=';
 $url = 'https://api.line.me/v1/oauth/verify';
 $headers = array('Authorization: Bearer ' . $access_token);
 $ch = curl_init($url);curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
