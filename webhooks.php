@@ -18,7 +18,7 @@ $check = 0;
           
 // Get POST body content
 $content = file_get_contents('php://input');
-
+$file = fopen($myfile,'w+')or die ("can't open file");
 fwrite($file , var_export($content,true));
 fclose($file);
 // Parse JSON
