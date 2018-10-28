@@ -1,8 +1,8 @@
 <?php // callback.php
 require "vendor/autoload.php";
 require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
-require "testt.txt";
-require "mess.txt";
+//require "testt.txt";
+//require "mess.txt";
 $myfile = "testt.txt";
 $myfile1 = "mess.txt";
 $pond = 0;
