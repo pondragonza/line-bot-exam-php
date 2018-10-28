@@ -129,7 +129,7 @@ if (!is_null($events['events'])) {
 
                                 }
                    }
-                   if (check == 1){
+                   if (check == 0){
                                  $replyToken = $event['replyToken'];
                                 $messages = [
                                 'type' => 'text',
