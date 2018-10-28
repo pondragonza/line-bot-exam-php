@@ -18,9 +18,9 @@ $check = 0;
           
 // Get POST body content
 $content = file_get_contents('php://input');
-$file = fopen($myfile,'w+')or die ("can't open file");
-fwrite($file , var_export($content,true));
-fclose($file);
+//$file = fopen($myfile,'w+')or die ("can't open file");
+//fwrite($file , var_export($content,true));
+//fclose($file);
 // Parse JSON
 $events = json_decode($content, true);
 // fwrite($file , var_export($events,true));
@@ -50,9 +50,9 @@ if (!is_null($events['events'])) {
                       curl_setopt($ch1, CURLOPT_PROXYUSERPWD, $proxyauth);
                       $result1 = curl_exec($ch1);
                       curl_close($ch1);
-//                      $file = fopen($myfile,'w+')or die ("can't open file");
-//                      fwrite($file , print_r($result1,true));
-                      
+                      $file = fopen($myfile,'w+')or die ("can't open file");
+                      fwrite($file , print_r($result1,true));
+                      fclose($file);
                       
 //                       fwrite($file1 , print_r($result1,true));
 //                       fclose($file1);
