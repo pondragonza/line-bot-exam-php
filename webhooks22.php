@@ -34,9 +34,9 @@ if (!is_null($events['events'])) {
                       
 //                       fwrite($file1 , print_r($result1,true));
 //                       fclose($file1);
-                       //$events2 = json_decode($result1, true);
-                      // $a = $events2['displayName'];
-                       $b = ("Hello พิมพ์ 1 เพื่อเรียกใช้ฟังก์ชั่น line notify");
+                       $events2 = json_decode($result1, true);
+                       $a = $events2['displayName'];
+                       $b = ("Hello ".$a." พิมพ์ 1 เพื่อเรียกใช้ฟังก์ชั่น line notify");
                        $replyToken = $event['replyToken'];
                       // Build message to reply back
                       $messages = [
