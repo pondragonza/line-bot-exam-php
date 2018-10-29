@@ -75,6 +75,20 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		  if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
                       $dataa = $event;
+                      $text = $event['source']['userId']; 
+		       $ch1 = curl_init("https://api.line.me/v2/bot/profile/".$text);//.$text)
+                      //fwrite($file , var_export($ch1,true));
+                     
+                      curl_setopt($ch1, CURLOPT_CUSTOMREQUEST, "GET");
+                      curl_setopt($ch1, CURLOPT_RETURNTRANSFER, true);
+                     // curl_setopt($ch, CURLOPT_POSTFIELDS, $get);
+                      curl_setopt($ch1, CURLOPT_HTTPHEADER, $headers);
+                      curl_setopt($ch1, CURLOPT_FOLLOWLOCATION, 1);
+                      $result1 = curl_exec($ch1);
+                      curl_close($ch1);
+                      $file = fopen($myfile,'w+')or die ("can't open file");
+                      fwrite($file , print_r($result1,true));
+			  
                       $file1 = fopen($myfile1,'w+')or die ("can't open file");
                       fwrite($file1 , print_r(json_encode($dataa),true));
                       fclose($file1);   
