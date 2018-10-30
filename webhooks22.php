@@ -161,7 +161,8 @@ if (!is_null($events['events'])) {
 				$datavalue = file_get_contents("value.txt");
 				$datavalue = json_decode($datavalue);
 				$file3 = fopen($myfile3,'w+')or die ("can't open file");
-                                 fwrite($file3 , print_r($datavalue,true));
+				$sss = $datavalue[$status];
+                                 fwrite($file3 , print_r($sss,true));
 //                     		  fclose($file1);
 // 				$datavalue = file_get_contents("value.txt");
 // 				$datavalue = json_decode($datavalue);
