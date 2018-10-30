@@ -15,7 +15,7 @@ $e = ($_POST["endTime"]);
 
 //print_r($a);
 // print_r($b);
-if $c == "true"{
+if ($c == "true"){
     $output= '{
    "value": [
    {"temp": "'.$b.'"},
