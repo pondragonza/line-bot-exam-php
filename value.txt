@@ -1,1 +1,1 @@
-{"endTime":"22:00","status":"waiting","temp":"28.20","hum":"47.60","startTime":"21:30"}
+1,2
