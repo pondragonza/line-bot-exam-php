@@ -3,7 +3,7 @@
 $myfile = "value.txt";
 $fileHandle = fopen($myfile,'w+')or die("can't open file");
 $content = file_get_contents('"value.txt');
-print_r($content)
+print_r($content);
 
 // $output=$_POST;
 // $a = ($_POST["hum"]);
