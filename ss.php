@@ -41,6 +41,6 @@ print_r($content);
 // }
 // print_r($output);
 // fwrite($fileHandle, $a);
-fwrite($fileHandle, print_r(json_encode($content), true));
+fwrite($fileHandle, print_r(json_encode($content)));
   fclose($fileHandle);
 ?>
