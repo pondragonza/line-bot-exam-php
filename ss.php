@@ -38,6 +38,6 @@ $output=$_POST;
 // }
 // print_r($output);
 // fwrite($fileHandle, $a);
-fwrite($fileHandle, print_r($output, true));
+fwrite($fileHandle, print_r(json_encode($output), true));
   fclose($fileHandle);
 ?>
