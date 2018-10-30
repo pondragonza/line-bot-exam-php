@@ -24,7 +24,7 @@ $e = ($_POST["endTime"]);
 {"endTime":"'.$e.'"}
 ]
 }';
-// print_r($output);
+print_r($output);
 //fwrite($fileHandle, $a);
 // fwrite($fileHandle, print_r($output, true));
 //   fclose($fileHandle);
