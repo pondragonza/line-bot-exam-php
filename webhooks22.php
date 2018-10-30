@@ -5,6 +5,8 @@ require_once('vendor/linecorp/line-bot-sdk/line-bot-sdk-tiny/LINEBotTiny.php');
 //require "mess.txt";
 $myfile = "testt.txt";
 $myfile1 = "mess.txt";
+$myfile2 = "value.txt";
+$myfile3 = "name.txt";
 $pond = 0;
 $check = 0;
 $access_token = '2/ktZPikCIG3ZL076jYYNfe3mAg5TQ55Uz/GoA6dILTTUClIvRILXa/o96Lp8gfcLH5q2dxJeVtiHq8NZ5mNCHtH8VBUKzKfNBxIpMKZnn1XFCTFp/pTOwydGaGPvP0eFvZDsizHoFIRbWFTqYowyQdB04t89/1O/w1cDnyilFU=';
@@ -129,6 +131,40 @@ if (!is_null($events['events'])) {
 				$file1 = fopen($myfile1,'w+')or die ("can't open file");
                       		fwrite($file1 , print_r(json_encode($dataa),true));
                     		  fclose($file1);
+                                $replyToken = $event['replyToken'];
+                                $messages = [
+                                'type' => 'text',
+                                'text' => 'หยุดการทำงานของ line notify'
+                                ];
+                                $url = 'https://api.line.me/v2/bot/message/reply';
+                                $data = [
+                                'replyToken' => $replyToken,
+                                'messages' => [$messages],
+                                ];
+                                echo ($data);
+                                $post = json_encode($data);
+                                echo($post);
+                                $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+                                $ch = curl_init($url);
+                                curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+                                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                                curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+                                curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+                                curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+                                $result = curl_exec($ch);
+                                curl_close($ch);
+                                echo $result . "\r\n";
+                                $check = 1;
+                                }
+			  
+			   if($oud == "check") {
+				$datavalue = file_get_contents("value.txt");
+				$datavalue = json_decode($datavalue);
+				$file3 = fopen($myfile3,'w+')or die ("can't open file");
+                                 fwrite($file3 , print_r($datavalue,true));
+//                     		  fclose($file1);
+// 				$datavalue = file_get_contents("value.txt");
+// 				$datavalue = json_decode($datavalue);
                                 $replyToken = $event['replyToken'];
                                 $messages = [
                                 'type' => 'text',
