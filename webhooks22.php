@@ -44,7 +44,7 @@ if (!is_null($events['events'])) {
 //                       fclose($file1);
                        $events2 = json_decode($result1, true);
                        $a = $events2['displayName'];
-                       $b = ("Hello ".$a." พิมพ์ 1 เพื่อเรียกใช้ฟังก์ชั่น line notify");
+                       $b = ("Hello ".$a." พิมพ์ Start เพื่อเรียกใช้ฟังก์ชั่น line notify");
                        $replyToken = $event['replyToken'];
                       // Build message to reply back
                       $messages = [
@@ -96,7 +96,7 @@ if (!is_null($events['events'])) {
                       $name = file_get_contents('name.txt');
                       $name2 = json_decode($name);
 //                      for ($i=0;$i<=1;$i++){ 
-                              if($oud == "start") {
+                              if($oud == "Start") {
 				$file1 = fopen($myfile1,'w+')or die ("can't open file");
                       		fwrite($file1 , print_r(json_encode($dataa),true));
                     		  fclose($file1);
@@ -104,6 +104,35 @@ if (!is_null($events['events'])) {
                                 $messages = [
                                 'type' => 'text',
                                 'text' => 'เริ่มการทำงานของ line notify'
+                                ];
+                                $url = 'https://api.line.me/v2/bot/message/reply';
+                                $data = [
+                                'replyToken' => $replyToken,
+                                'messages' => [$messages],
+                                ];
+                                echo ($data);
+                                $post = json_encode($data);
+                                echo($post);
+                                $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+                                $ch = curl_init($url);
+                                curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+                                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                                curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+                                curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+                                curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+                                $result = curl_exec($ch);
+                                curl_close($ch);
+                                echo $result . "\r\n";
+                                $check = 1;
+                                }
+			  if($oud == "Stop") {
+				$file1 = fopen($myfile1,'w+')or die ("can't open file");
+                      		fwrite($file1 , print_r(json_encode($dataa),true));
+                    		  fclose($file1);
+                                $replyToken = $event['replyToken'];
+                                $messages = [
+                                'type' => 'text',
+                                'text' => 'หยุดการทำงานของ line notify'
                                 ];
                                 $url = 'https://api.line.me/v2/bot/message/reply';
                                 $data = [
