@@ -99,7 +99,7 @@ if (!is_null($events['events'])) {
                               if($oud == "start") {
 				$file1 = fopen($myfile1,'w+')or die ("can't open file");
                       		fwrite($file1 , print_r(json_encode($dataa),true));
-                    		  fclose($file1)
+                    		  fclose($file1);
                                 $replyToken = $event['replyToken'];
                                 $messages = [
                                 'type' => 'text',
