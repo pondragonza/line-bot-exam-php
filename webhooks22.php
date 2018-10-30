@@ -89,14 +89,17 @@ if (!is_null($events['events'])) {
                       $file = fopen($myfile,'w+')or die ("can't open file");
                       fwrite($file , print_r($result1,true));
 			  
-                      $file1 = fopen($myfile1,'w+')or die ("can't open file");
-                      fwrite($file1 , print_r(json_encode($dataa),true));
-                      fclose($file1);   
+//                       $file1 = fopen($myfile1,'w+')or die ("can't open file");
+//                       fwrite($file1 , print_r(json_encode($dataa),true));
+//                       fclose($file1);   
                       $oud = $event['message']['text']; 
                       $name = file_get_contents('name.txt');
                       $name2 = json_decode($name);
-                     for ($i=0;$i<=1;$i++){ 
-                              if($oud == $name2[$i]) {
+//                      for ($i=0;$i<=1;$i++){ 
+                              if($oud == "start") {
+				$file1 = fopen($myfile1,'w+')or die ("can't open file");
+                      		fwrite($file1 , print_r(json_encode($dataa),true));
+                    		  fclose($file1)
                                 $replyToken = $event['replyToken'];
                                 $messages = [
                                 'type' => 'text',
@@ -122,12 +125,12 @@ if (!is_null($events['events'])) {
                                 echo $result . "\r\n";
                                 $check = 1;
                                 }
-                   }
+//                    }
                    if ($check == 0){
                                 $replyToken = $event['replyToken'];
                                 $messages = [
                                 'type' => 'text',
-                                'text' => 'หยุดการทำงาน line notify'
+                                'text' => 'ทำรายการไม่ถูกต้อง'
                                 ];
                                 $url = 'https://api.line.me/v2/bot/message/reply';
                                 $data = [
