@@ -1,8 +1,11 @@
 <?php
-require "value.txt" ;
+// require "value.txt" ;
 $myfile = "value.txt";
 $fileHandle = fopen($myfile,'w+')or die("can't open file");
-$output=$_POST;
+$content = file_get_contents('"value.txt',true);
+
+
+// $output=$_POST;
 // $a = ($_POST["hum"]);
 // // print_r($a);
 // $b = ($_POST["temp"]);
@@ -38,6 +41,6 @@ $output=$_POST;
 // }
 // print_r($output);
 // fwrite($fileHandle, $a);
-fwrite($fileHandle, print_r(json_encode($output), true));
+fwrite($fileHandle, print_r(json_encode($content), true));
   fclose($fileHandle);
 ?>
