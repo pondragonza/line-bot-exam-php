@@ -1,5 +1,5 @@
 <?php
 $content = file_get_contents('pond.txt');
 $d = (json_decode($content));
-print_r($d[0]);
+print_r($d[1]);
 ?>
