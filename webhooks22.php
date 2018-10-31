@@ -159,10 +159,11 @@ if (!is_null($events['events'])) {
 			  
 			   if($oud == "check") {
 				$datavalue = file_get_contents("value.txt");
-// 				$datavalue = json_decode($datavalue);
+				$datavalue = json_decode($datavalue);
+				
 				$file3 = fopen($myfile3,'w+')or die ("can't open file");
-				$sss = array($datavalue);
-                                 fwrite($file3 , print_r($sss,true));
+// 				$sss = array($datavalue);
+                                 fwrite($file3 , print_r($datavalue[0],true));
 //                     		  fclose($file1);
 // 				$datavalue = file_get_contents("value.txt");
 // 				$datavalue = json_decode($datavalue);
