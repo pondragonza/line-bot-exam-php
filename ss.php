@@ -41,14 +41,14 @@ $f = ($_POST["Subject"]);
 // print_r($output);
 // fwrite($fileHandle, $a);
 if ($a == "true"){
-  $oud = [$a];
+  $oud = [$d];
 }
 else if ($a == "false"){
-  $oud = [$a];
+  $oud = [$d];
 //   $oud = ("[true,busy,".$f.",".$b.",".$c.",".$d.",".$e."]");
   }else{
 //   $oud = ("[true,waiting,".$f.",".$b.",".$c.",".$d.",".$e."]") ;
-  $oud = [$a];
+  $oud = [$d];
 //    $oud = ("[".$a,$d,$e."]");
 }
 fwrite($fileHandle,print_r(json_encode($oud)));
