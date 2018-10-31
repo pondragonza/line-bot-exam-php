@@ -41,14 +41,14 @@ $f = ($_POST["Subject"]);
 // print_r($output);
 // fwrite($fileHandle, $a);
 if ($c == "true"){
-  $oud = ("[".$a.",".$d.",".$e."]")
+  $oud = ("[".$a.",".$d.",".$e."]");
 fwrite($fileHandle,print_r($oud,true));
 //   fwrite($fileHandle, (print_r($a)));
 fclose($fileHandle);
 
 }
 else{
-  $oud =("[".$a.",".$f.",".$b.",".$c.",".$d.",".$e."]")
+  $oud =("[".$a.",".$f.",".$b.",".$c.",".$d.",".$e."]");
   fwrite($fileHandle, (print_r($oud,true));
 //   fwrite($fileHandle, (print_r($a)));
   
