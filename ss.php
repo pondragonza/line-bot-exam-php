@@ -46,13 +46,12 @@ fwrite($fileHandle,print_r($oud,true));
 //   fwrite($fileHandle, (print_r($a)));
 fclose($fileHandle);
 
-}
-else{
+}else{
 //   $oud = ("[".$a.",".$f.",".$b.",".$c.",".$d.",".$e."]") ;
 //   $oud = ("[".$a.",".$d.",".$e."]");
-  fwrite($fileHandle, (print_r($a,true));
-//   fwrite($fileHandle, (print_r($a)));
+//   fwrite($fileHandle, (print_r($a,true));
+// //   fwrite($fileHandle, (print_r($a)));
   
-  fclose($fileHandle);
+//   fclose($fileHandle);
 }
 ?> 
