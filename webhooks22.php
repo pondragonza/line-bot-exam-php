@@ -176,9 +176,9 @@ if (!is_null($events['events'])) {
 				$messages = [
                                 'type' => 'text',
                                 'text' => 'room A is status : busy 
-				\n'.'Subject : '.$datavalue[1].'
-				\n'.'startTime : '.$datavalue[2].'
-				\n'.'endTime : '.$datavalue[3].'
+				'.'Subject : '.$datavalue[1].'
+				'.'startTime : '.$datavalue[2].'
+				'.'endTime : '.$datavalue[3].'
 				'.'room A temp : '.$datavalue[4].'
 				'.'room A Humidity : '.$datavalue[5]
                                 ];
