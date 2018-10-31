@@ -163,8 +163,8 @@ if (!is_null($events['events'])) {
 				
 				$file3 = fopen($myfile3,'w+')or die ("can't open file");
 // 				$sss = array($datavalue);
-                                 fwrite($file3 , print_r($datavalue[''],true));
-                    		 fclose($file3);
+                                 fwrite($file3 , print_r($datavalue,true));
+//                     		 fclose($file3);
 // 				$datavalue = file_get_contents("value.txt");
 // 				$datavalue = json_decode($datavalue);
                                 $replyToken = $event['replyToken'];
