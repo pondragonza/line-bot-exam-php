@@ -166,7 +166,7 @@ if (!is_null($events['events'])) {
 				 if ($sss == "true"){
 				$messages = [
                                 'type' => 'text',
-                                'text' => '   room A is status : free 
+                                'text' => 'room A is status : free 
 				'.'room A temp : '.$datavalue[1].'
 				'.'room A Humidity : '.$datavalue[2]
                                 ];
@@ -176,17 +176,22 @@ if (!is_null($events['events'])) {
 				$messages = [
                                 'type' => 'text',
                                 'text' => 'room A is status : busy 
-				'.'room A temp : '.$datavalue[1].'
-				'.
-				'room A Humidity : '.$datavalue[2]
+				'.'Subject : '.$datavalue[1].'
+				'.'startTime : '.$datavalue[2].'
+				'.'endTime : '.$datavalue[3].'
+				'.'room A temp : '.$datavalue[4].'
+				'.'room A Humidity : '.$datavalue[5]
                                 ];
 					 
 		  		}else{
 				$messages = [
                                 'type' => 'text',
-                                'text' => 'room A is status : watting ',
-				'text' => 'room A temp : '.$datavalue[1],
-				'text' => 'room A Humidity : '.$datavalue[2]
+                                'text' => 'room A is status : busy 
+				'.'Subject : '.$datavalue[1].'
+				'.'startTime : '.$datavalue[2].'
+				'.'endTime : '.$datavalue[3].'
+				'.'room A temp : '.$datavalue[4].'
+				'.'room A Humidity : '.$datavalue[5]
                                 ];
 				}
                                  fwrite($file3 , print_r($sss,true));
