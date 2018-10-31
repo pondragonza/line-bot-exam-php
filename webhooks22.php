@@ -183,8 +183,8 @@ if (!is_null($events['events'])) {
 		  		}else{
 				$messages = [
                                 'type' => 'text',
-                                'text' => 'room A is status : watting '
-					  'room A temp : '.$datavalue[1]
+                                'text' => 'room A is status : watting '.
+					  'room A temp : '.$datavalue[1].
 					  'room A Humidity : '.$datavalue[2]
                                 ];
 				}
