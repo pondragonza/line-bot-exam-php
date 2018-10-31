@@ -44,13 +44,13 @@ $f = ($_POST["Subject"]);
 // print_r($output);
 // fwrite($fileHandle, $a);
 if ($c == "true"){
-fwrite($fileHandle, print_r("[".$a.",".$d.",".$e."]"));
+fwrite($fileHandle, print_r("[".$a.",".$d.",".$e."]",true));
 //   fwrite($fileHandle, (print_r($a)));
-//   fclose($fileHandle);
+  fclose($fileHandle);
 
 }
 else{
-fwrite($fileHandle, (print_r("[".$a.",".$f.",".$b.",".$c.",".$d.",".$e."]")));
+fwrite($fileHandle, (print_r("[".$a.",".$f.",".$b.",".$c.",".$d.",".$e."]"),true));
 //   fwrite($fileHandle, (print_r($a)));
   
   fclose($fileHandle);
