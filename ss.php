@@ -51,7 +51,7 @@ else if ($a == "false"){
   $oud = [$a];
 //    $oud = ("[".$a,$d,$e."]");
 }
-fwrite($fileHandle,print_r($oud));
+fwrite($fileHandle,print_r(json_encode($oud)));
 //   fwrite($fileHandle, (print_r($a)));
 fclose($fileHandle);
 
