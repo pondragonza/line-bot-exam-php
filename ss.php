@@ -44,8 +44,8 @@ $f = ($_POST["Subject"]);
 // print_r($output);
 // fwrite($fileHandle, $a);
 // if ($c == "true"){
-  $oud = ("[".$a.",".$d.",".$e."]")
-fwrite($fileHandle, (print_r($oud),true));
+//   $oud = ("[".$a.",".$d.",".$e."]")
+fwrite($fileHandle, (print_r($a),true));
 //   fwrite($fileHandle, (print_r($a)));
   fclose($fileHandle);
 
