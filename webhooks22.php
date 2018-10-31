@@ -157,13 +157,13 @@ if (!is_null($events['events'])) {
                                 $check = 1;
                                 }
 			  
-			   if($oud == "check") {
+			   if($oud == "Check") {
 				$datavalue = file_get_contents("value.txt");
 				$datavalue = json_decode($datavalue);
 				
 				$file3 = fopen($myfile3,'w+')or die ("can't open file");
 // 				$sss = array($datavalue);
-                                 fwrite($file3 , print_r($datavalue,true));
+                                 fwrite($file3 , print_r($datavalue));
 //                     		  fclose($file1);
 // 				$datavalue = file_get_contents("value.txt");
 // 				$datavalue = json_decode($datavalue);
