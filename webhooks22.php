@@ -163,6 +163,13 @@ if (!is_null($events['events'])) {
 				
 				$file3 = fopen($myfile3,'w+')or die ("can't open file");
  				$sss = ($datavalue[0]);
+				 if ($sss == "true"){
+				$messages = [
+                                'type' => 'text',
+                                'text' => 'room A is status : free '.'\nroom A temp :'.$datavalue[1].'\nroom A Humidity :'.$datavalue[2].''
+                                ];
+					 
+		  		}
                                  fwrite($file3 , print_r($sss,true));
                      		 fclose($file3);
 // 				$datavalue = file_get_contents("value.txt");
