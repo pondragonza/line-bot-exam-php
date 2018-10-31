@@ -170,7 +170,7 @@ if (!is_null($events['events'])) {
                                 $replyToken = $event['replyToken'];
                                 $messages = [
                                 'type' => 'text',
-                                'text' => '"'.$sss.'"'
+                                'text' => ''.$sss.''
                                 ];
                                 $url = 'https://api.line.me/v2/bot/message/reply';
                                 $data = [
