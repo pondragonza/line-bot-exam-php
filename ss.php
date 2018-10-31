@@ -40,7 +40,7 @@ $f = ($_POST["Subject"]);
 // }
 // print_r($output);
 // fwrite($fileHandle, $a);
-if ($c == "true"){
+if ($a == "true"){
   $oud = ("[".$a.",".$d.",".$e."]");
   }else{
   $oud = ("[".$a.",".$f.",".$b.",".$c.",".$d.",".$e."]") ;
