@@ -41,9 +41,12 @@ $f = ($_POST["Subject"]);
 // print_r($output);
 // fwrite($fileHandle, $a);
 if ($a == "true"){
-  $oud = ("[".$a.",".$d.",".$e."]");
+  $oud = ("[free,".$d.",".$e."]");
+}
+else if ($a == "false"){
+  $oud = ("[busy,".$f.",".$b.",".$c.",".$d.",".$e."]");
   }else{
-  $oud = ("[".$a.",".$f.",".$b.",".$c.",".$d.",".$e."]") ;
+  $oud = ("[waiting,".$f.",".$b.",".$c.",".$d.",".$e."]") ;
 }
 fwrite($fileHandle,print_r($oud,true));
 //   fwrite($fileHandle, (print_r($a)));
