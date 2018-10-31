@@ -2,7 +2,7 @@
 require "value.txt" ;
 $myfile = "value.txt";
 $fileHandle = fopen($myfile,'w+')or die("can't open file");
-$output=$_POST;
+// $output=$_POST;
 $e = ($_POST["hum"]);
 // // print_r($a);
 $d = ($_POST["temp"]);
@@ -41,14 +41,16 @@ $f = ($_POST["Subject"]);
 // print_r($output);
 // fwrite($fileHandle, $a);
 if ($a == "true"){
-  $oud = ("[true,free,".$d.",".$e."]");
+  $oud = ("[".$a,$d,$e."]");
 }
 else if ($a == "false"){
-  $oud = ("[true,busy,".$f.",".$b.",".$c.",".$d.",".$e."]");
+   $oud = ("[".$a,$d,$e."]");
+//   $oud = ("[true,busy,".$f.",".$b.",".$c.",".$d.",".$e."]");
   }else{
-  $oud = ("[true,waiting,".$f.",".$b.",".$c.",".$d.",".$e."]") ;
+//   $oud = ("[true,waiting,".$f.",".$b.",".$c.",".$d.",".$e."]") ;
+   $oud = ("[".$a,$d,$e."]");
 }
-fwrite($fileHandle,print_r($oud,true));
+fwrite($fileHandle,print_r($oud));
 //   fwrite($fileHandle, (print_r($a)));
 fclose($fileHandle);
 
