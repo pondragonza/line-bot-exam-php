@@ -3,17 +3,17 @@ require "value.txt" ;
 $myfile = "value.txt";
 $fileHandle = fopen($myfile,'w+')or die("can't open file");
 $output=$_POST;
-// $e = ($_POST["hum"]);
-// // // print_r($a);
-// $d = ($_POST["temp"]);
-// // // print_r($b);
-// $a = ($_POST["status"]);
-// // // print_r($c);
-// $b = ($_POST["startTime"]);
-// // // print_r($d);
-// $c = ($_POST["endTime"]);
-// // // print_r($e);
-// $f = ($_POST["Subject"]);
+$e = ($_POST["hum"]);
+// // print_r($a);
+$d = ($_POST["temp"]);
+// // print_r($b);
+$a = ($_POST["status"]);
+// // print_r($c);
+$b = ($_POST["startTime"]);
+// // print_r($d);
+$c = ($_POST["endTime"]);
+// // print_r($e);
+$f = ($_POST["Subject"]);
 
 
 //print_r($a);
@@ -40,18 +40,18 @@ $output=$_POST;
 // }
 // print_r($output);
 // fwrite($fileHandle, $a);
-// if ($c == "true"){
-//   $oud = ("[".$a.",".$d.",".$e."]")
-fwrite($fileHandle,print_r($output,true));
+if ($c == "true"){
+  $oud = ("[".$a.",".$d.",".$e."]")
+fwrite($fileHandle,print_r($oud,true));
 //   fwrite($fileHandle, (print_r($a)));
 fclose($fileHandle);
 
-// }
-// else{
-//   $oud =("[".$a.",".$f.",".$b.",".$c.",".$d.",".$e."]")
-//   fwrite($fileHandle, (print_r($oud),true));
+}
+else{
+  $oud =("[".$a.",".$f.",".$b.",".$c.",".$d.",".$e."]")
+  fwrite($fileHandle, (print_r($oud,true));
 //   fwrite($fileHandle, (print_r($a)));
   
-//   fclose($fileHandle);
+  fclose($fileHandle);
 // }
 ?> 
