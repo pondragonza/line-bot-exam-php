@@ -166,12 +166,28 @@ if (!is_null($events['events'])) {
 				 if ($sss == "true"){
 				$messages = [
                                 'type' => 'text',
-                                'text' => 'room A is status : free '.
-					  'room A temp : '.$datavalue[1].
+                                'text' => 'room A is status : free '.\n.
+					  'room A temp : '.$datavalue[1].\n.
 					  'room A Humidity : '.$datavalue[2]
                                 ];
 					 
 		  		}
+				else if ($sss == "false"){
+				$messages = [
+                                'type' => 'text',
+                                'text' => 'room A is status : busy '.
+					  'room A temp : '.$datavalue[1].
+					  'room A Humidity : '.$datavalue[2]
+                                ];
+					 
+		  		}else{
+				$messages = [
+                                'type' => 'text',
+                                'text' => 'room A is status : watting '
+					  'room A temp : '.$datavalue[1]
+					  'room A Humidity : '.$datavalue[2]
+                                ];
+				}
                                  fwrite($file3 , print_r($sss,true));
                      		 fclose($file3);
 // 				$datavalue = file_get_contents("value.txt");
