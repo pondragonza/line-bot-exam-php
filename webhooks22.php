@@ -166,9 +166,10 @@ if (!is_null($events['events'])) {
 				 if ($sss == "true"){
 				$messages = [
                                 'type' => 'text',
-                                'text' => 'room A is status : free ',
-				'text' => 'room A temp : '.$datavalue[1],
-				'text' => 'room A Humidity : '.$datavalue[2]
+                                'text' => 'room A is status : free 
+					'.
+					 'room A temp : '.$datavalue[1].
+					 'room A Humidity : '.$datavalue[2]
                                 ];
 					 
 		  		}
