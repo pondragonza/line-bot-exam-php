@@ -2,9 +2,6 @@
 require "value.txt" ;
 $myfile = "value.txt";
 $fileHandle = fopen($myfile,'w+')or die("can't open file");
-// $content = file_get_contents('"value.txt');
-// print_r($content);
-
 $output=$_POST;
 // $e = ($_POST["hum"]);
 // // // print_r($a);
@@ -45,9 +42,9 @@ $output=$_POST;
 // fwrite($fileHandle, $a);
 // if ($c == "true"){
 //   $oud = ("[".$a.",".$d.",".$e."]")
-fwrite($fileHandle, (print_r($output),true));
+fwrite($fileHandle,print_r($output),true);
 //   fwrite($fileHandle, (print_r($a)));
-  fclose($fileHandle);
+fclose($fileHandle);
 
 // }
 // else{
