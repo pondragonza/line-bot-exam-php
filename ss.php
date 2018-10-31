@@ -16,6 +16,8 @@ $b = ($_POST["startTime"]);
 // // print_r($d);
 $c = ($_POST["endTime"]);
 // // print_r($e);
+$f = ($_POST["Subject"]);
+
 
 //print_r($a);
 // print_r($b);
@@ -41,6 +43,12 @@ $c = ($_POST["endTime"]);
 // }
 // print_r($output);
 // fwrite($fileHandle, $a);
-fwrite($fileHandle, print_r(json_encode($content)));
+if ($c == "true"){
+fwrite($fileHandle, print_r("[".$a.",".$d.",".$e."]"));
+
+}
+else{
+fwrite($fileHandle, print_r("[".$a.",".$f.",".$b.",".$c.",".$d.",".$e."]"));
   fclose($fileHandle);
+}
 ?>
