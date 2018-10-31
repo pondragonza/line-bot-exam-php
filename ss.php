@@ -55,7 +55,7 @@ else if ($a == "false"){
    $oud = ('["'.$a.'","'.$d.'","'.$e.'"]');
 //    $oud = ("[".$a,$d,$e."]");
 }
-fwrite($fileHandle,print_r(($oud,true)));
+fwrite($fileHandle,print_r($oud,true));
 //   fwrite($fileHandle, (print_r($a)));
 fclose($fileHandle);
 
