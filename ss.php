@@ -1,5 +1,5 @@
 <?php
-// require "value.txt" ;
+require "value.txt" ;
 $myfile = "value.txt";
 $fileHandle = fopen($myfile,'w+')or die("can't open file");
 // $content = file_get_contents('"value.txt');
@@ -44,11 +44,15 @@ $f = ($_POST["Subject"]);
 // print_r($output);
 // fwrite($fileHandle, $a);
 if ($c == "true"){
-fwrite($fileHandle, print_r("[".$a.",".$d.",".$e."]"));
+// fwrite($fileHandle, print_r("[".$a.",".$d.",".$e."]"));
+  fwrite($fileHandle, (print_r($a)));
+  fclose($fileHandle);
 
 }
 else{
-fwrite($fileHandle, print_r("[".$a.",".$f.",".$b.",".$c.",".$d.",".$e."]"));
+// fwrite($fileHandle, (print_r("[".$a.",".$f.",".$b.",".$c.",".$d.",".$e."]")));
+  fwrite($fileHandle, (print_r($a)));
+  
   fclose($fileHandle);
 }
 ?>
