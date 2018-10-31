@@ -5,18 +5,18 @@ $fileHandle = fopen($myfile,'w+')or die("can't open file");
 // $content = file_get_contents('"value.txt');
 // print_r($content);
 
-// $output=$_POST;
-$e = ($_POST["hum"]);
-// // print_r($a);
-$d = ($_POST["temp"]);
-// // print_r($b);
-$a = ($_POST["status"]);
-// // print_r($c);
-$b = ($_POST["startTime"]);
-// // print_r($d);
-$c = ($_POST["endTime"]);
-// // print_r($e);
-$f = ($_POST["Subject"]);
+$output=$_POST;
+// $e = ($_POST["hum"]);
+// // // print_r($a);
+// $d = ($_POST["temp"]);
+// // // print_r($b);
+// $a = ($_POST["status"]);
+// // // print_r($c);
+// $b = ($_POST["startTime"]);
+// // // print_r($d);
+// $c = ($_POST["endTime"]);
+// // // print_r($e);
+// $f = ($_POST["Subject"]);
 
 
 //print_r($a);
@@ -45,7 +45,7 @@ $f = ($_POST["Subject"]);
 // fwrite($fileHandle, $a);
 // if ($c == "true"){
 //   $oud = ("[".$a.",".$d.",".$e."]")
-fwrite($fileHandle, (print_r($a),true));
+fwrite($fileHandle, (print_r($output),true));
 //   fwrite($fileHandle, (print_r($a)));
   fclose($fileHandle);
 
