@@ -153,7 +153,7 @@ if (!is_null($events['events'])) {
                                 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
                                 $result = curl_exec($ch);
                                 curl_close($ch);
-                                echo $result . "\r\n";
+                                echo $result . "Check";
                                 $check = 1;
                                 }
 			  
@@ -176,11 +176,11 @@ if (!is_null($events['events'])) {
 				$messages = [
                                 'type' => 'text',
                                 'text' => 'room A is status : busy 
-				'.'Subject : '.$datavalue[1].'
-				\r\n'.'startTime : '.$datavalue[2].'
-				\r\n'.'endTime : '.$datavalue[3].'
-				\r\n'.'room A temp : '.$datavalue[4].'
-				\r\n'.'room A Humidity : '.$datavalue[5]
+				'.'Subject : '\r\n.$datavalue[1].'
+				'.'startTime : '\r\n.$datavalue[2].'
+				'.'endTime : '.$datavalue[3].'
+				'.'room A temp : '.$datavalue[4].'
+				'.'room A Humidity : '.$datavalue[5]
                                 ];
 					 
 		  		}else{
