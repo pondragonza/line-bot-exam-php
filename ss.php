@@ -42,7 +42,7 @@ $output=$_POST;
 // fwrite($fileHandle, $a);
 // if ($c == "true"){
 //   $oud = ("[".$a.",".$d.",".$e."]")
-fwrite($fileHandle,print_r($output),true);
+fwrite($fileHandle,print_r($output,true));
 //   fwrite($fileHandle, (print_r($a)));
 fclose($fileHandle);
 
