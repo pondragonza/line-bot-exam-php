@@ -175,10 +175,10 @@ if (!is_null($events['events'])) {
 // 				$datavalue = file_get_contents("value.txt");
 // 				$datavalue = json_decode($datavalue);
                                 $replyToken = $event['replyToken'];
-                                $messages = [
-                                'type' => 'text',
-                                'text' => ''.$sss.''
-                                ];
+//                                 $messages = [
+//                                 'type' => 'text',
+//                                 'text' => ''.$sss.''
+//                                 ];
                                 $url = 'https://api.line.me/v2/bot/message/reply';
                                 $data = [
                                 'replyToken' => $replyToken,
