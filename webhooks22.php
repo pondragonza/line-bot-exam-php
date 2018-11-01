@@ -164,7 +164,7 @@ if (!is_null($events['events'])) {
 				$file3 = fopen($myfile3,'w+')or die ("can't open file");
  				$sss = ($datavalue[0]);
 				 if ($sss == "true"){
-				$messages = [
+				$messages = [{
                                 'type' => 'text',
                                 'text' => 'room A is status : free 
 				'.'room A temp : '.$datavalue[1].'
@@ -176,6 +176,7 @@ if (!is_null($events['events'])) {
 //             			"action"=> 
 //              			 "type"=> "cameraRoll",
 //              			 "label" => "Camera Roll"
+				}
 // 				]
                                 ];
 // 				$messs = [
