@@ -169,14 +169,20 @@ if (!is_null($events['events'])) {
                                 'text' => 'room A is status : free 
 				'.'room A temp : '.$datavalue[1].'
 				'.'room A Humidity : '.$datavalue[2],
-				 "quickReply": => 
-                                ];
-				$messs = [
+				"quickReply": => 
+				"items"=> [
 				"type"=> "action",
             			"action"=> 
              			 "type"=> "cameraRoll",
              			 "label" => "Camera Roll"
-					];
+				]
+                                ];
+// 				$messs = [
+// 				"type"=> "action",
+//             			"action"=> 
+//              			 "type"=> "cameraRoll",
+//              			 "label" => "Camera Roll"
+// 					];
 					 
 		  		}
 				else if ($sss == "false"){
@@ -188,13 +194,20 @@ if (!is_null($events['events'])) {
 				'.'endTime : '.$datavalue[3].'
 				'.'room A temp : '.$datavalue[4].'
 				'.'room A Humidity : '.$datavalue[5]
-                                ];
-				$messs = [
+				"quickReply": => 
+				"items"=> [
 				"type"=> "action",
             			"action"=> 
              			 "type"=> "cameraRoll",
-             			 "label"=> "Camera Roll"
-					];
+             			 "label" => "Camera Roll"
+				] 
+                                ];
+// 				$messs = [
+// 				"type"=> "action",
+//             			"action"=> 
+//              			 "type"=> "cameraRoll",
+//              			 "label"=> "Camera Roll"
+// 					];
 					 
 		  		}else{
 				$messages = [
@@ -205,13 +218,19 @@ if (!is_null($events['events'])) {
 				'.'endTime : '.$datavalue[3].'
 				'.'room A temp : '.$datavalue[4].'
 				'.'room A Humidity : '.$datavalue[5]
-                                ];
-				$messs = [
+				"quickReply": => 
+				"items"=> [
 				"type"=> "action",
             			"action"=> 
-             			 "type"=>"cameraRoll",
-             			 "label"=> "Camera Roll"
-					];
+             			 "type"=> "cameraRoll",
+             			 "label" => "Camera Roll"
+				]];
+// 				$messs = [
+// 				"type"=> "action",
+//             			"action"=> 
+//              			 "type"=>"cameraRoll",
+//              			 "label"=> "Camera Roll"
+// 					];
 				
 					
 				}
