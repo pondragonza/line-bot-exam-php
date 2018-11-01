@@ -165,27 +165,17 @@ if (!is_null($events['events'])) {
  				$sss = ($datavalue[0]);
 				 if ($sss == "true"){
 				$messages = [
-                                'type' => 'text',
-                                'text' => 'room A is status : free 
+                                'type' : 'text',
+                                'text' : 'room A is status : free 
 				'.'room A temp : '.$datavalue[1].'
 				'.'room A Humidity : '.$datavalue[2],
-				 "quickReply" => {
-       				  "items" => [
-					  {"type": "action",
-					    "action": {
-					      "type": "cameraRoll",
-					      "label": "Camera Roll"
-					    }
-           					 }
-					  ]
-				
                                 ];
 					 
 		  		}
 				else if ($sss == "false"){
 				$messages = [
-                                'type' => 'text',
-                                'text' => 'room A is status : busy 
+                                'type' : 'text',
+                                'text' :'room A is status : busy 
 				'.'Subject : '.$datavalue[1].'
 				'.'startTime : '.$datavalue[2].'
 				'.'endTime : '.$datavalue[3].'
@@ -195,8 +185,8 @@ if (!is_null($events['events'])) {
 					 
 		  		}else{
 				$messages = [
-                                'type' => 'text',
-                                'text' => 'room A is status : waiting 
+                                'type' : 'text',
+                                'text' : 'room A is status : waiting 
 				'.'Subject : '.$datavalue[1].'
 				'.'startTime : '.$datavalue[2].'
 				'.'endTime : '.$datavalue[3].'
