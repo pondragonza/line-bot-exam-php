@@ -165,34 +165,55 @@ if (!is_null($events['events'])) {
  				$sss = ($datavalue[0]);
 				 if ($sss == "true"){
 				$messages = [
-                                'type' : 'text',
-                                'text' : 'room A is status : free 
+                                'type' => 'text',
+                                'text' => 'room A is status : free 
 				'.'room A temp : '.$datavalue[1].'
 				'.'room A Humidity : '.$datavalue[2],
+				 "quickReply": => 
                                 ];
+				$messs = [
+				"type"=> "action",
+            			"action"=> 
+             			 "type"=> "cameraRoll",
+             			 "label" => "Camera Roll"
+					];
 					 
 		  		}
 				else if ($sss == "false"){
 				$messages = [
-                                'type' : 'text',
-                                'text' :'room A is status : busy 
+                                'type' => 'text',
+                                'text' =>'room A is status : busy 
 				'.'Subject : '.$datavalue[1].'
 				'.'startTime : '.$datavalue[2].'
 				'.'endTime : '.$datavalue[3].'
 				'.'room A temp : '.$datavalue[4].'
 				'.'room A Humidity : '.$datavalue[5]
                                 ];
+				$messs = [
+				"type"=> "action",
+            			"action"=> 
+             			 "type"=> "cameraRoll",
+             			 "label"=> "Camera Roll"
+					];
 					 
 		  		}else{
 				$messages = [
-                                'type' : 'text',
-                                'text' : 'room A is status : waiting 
+                                'type' => 'text',
+                                'text' => 'room A is status : waiting 
 				'.'Subject : '.$datavalue[1].'
 				'.'startTime : '.$datavalue[2].'
 				'.'endTime : '.$datavalue[3].'
 				'.'room A temp : '.$datavalue[4].'
 				'.'room A Humidity : '.$datavalue[5]
                                 ];
+				$messs = [
+				"type"=> "action",
+            			"action"=> 
+             			 "type"=>"cameraRoll",
+             			 "label"=> "Camera Roll"
+					];
+				
+					
 				}
                                  fwrite($file3 , print_r($sss,true));
                      		 fclose($file3);
@@ -233,7 +254,7 @@ if (!is_null($events['events'])) {
                                 $url = 'https://api.line.me/v2/bot/message/reply';
                                 $data = [
                                 'replyToken' => $replyToken,
-                                'messages' => [$messages],
+                                'messages' => [$messages.$messs],
                                 ];
                                  echo($data);
                                 $post = json_encode($data);
