@@ -168,7 +168,17 @@ if (!is_null($events['events'])) {
                                 'type' => 'text',
                                 'text' => 'room A is status : free 
 				'.'room A temp : '.$datavalue[1].'
-				'.'room A Humidity : '.$datavalue[2]
+				'.'room A Humidity : '.$datavalue[2],
+				 "quickReply" => {
+       				  "items" => [
+					  {"type": "action",
+					    "action": {
+					      "type": "cameraRoll",
+					      "label": "Camera Roll"
+					    }
+           					 }
+					  ]
+				
                                 ];
 					 
 		  		}
