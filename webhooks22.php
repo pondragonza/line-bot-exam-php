@@ -168,13 +168,14 @@ if (!is_null($events['events'])) {
                                 'type' => 'text',
                                 'text' => 'room A is status : free 
 				'.'room A temp : '.$datavalue[1].'
-				'.'room A Humidity : '.$datavalue[2],
-				"quickReply": => 
-				"items"=> [
-				"type"=> "action",
-            			"action"=> 
-             			 "type"=> "cameraRoll",
-             			 "label" => "Camera Roll"
+				'.'room A Humidity : '.$datavalue[2]
+// 					,
+// 				"quickReply": => 
+// 				"items"=> [
+// 				"type"=> "action",
+//             			"action"=> 
+//              			 "type"=> "cameraRoll",
+//              			 "label" => "Camera Roll"
 				]
                                 ];
 // 				$messs = [
@@ -194,13 +195,13 @@ if (!is_null($events['events'])) {
 				'.'endTime : '.$datavalue[3].'
 				'.'room A temp : '.$datavalue[4].'
 				'.'room A Humidity : '.$datavalue[5]
-				"quickReply": => 
-				"items"=> [
-				"type"=> "action",
-            			"action"=> 
-             			 "type"=> "cameraRoll",
-             			 "label" => "Camera Roll"
-				] 
+// 				"quickReply": => 
+// 				"items"=> [
+// 				"type"=> "action",
+//             			"action"=> 
+//              			 "type"=> "cameraRoll",
+//              			 "label" => "Camera Roll"
+// 				] 
                                 ];
 // 				$messs = [
 // 				"type"=> "action",
@@ -218,13 +219,14 @@ if (!is_null($events['events'])) {
 				'.'endTime : '.$datavalue[3].'
 				'.'room A temp : '.$datavalue[4].'
 				'.'room A Humidity : '.$datavalue[5]
-				"quickReply": => 
-				"items"=> [
-				"type"=> "action",
-            			"action"=> 
-             			 "type"=> "cameraRoll",
-             			 "label" => "Camera Roll"
-				]];
+// 				"quickReply": => 
+// 				"items"=> [
+// 				"type"=> "action",
+//             			"action"=> 
+//              			 "type"=> "cameraRoll",
+//              			 "label" => "Camera Roll"
+// 				]
+				];
 // 				$messs = [
 // 				"type"=> "action",
 //             			"action"=> 
