@@ -190,12 +190,12 @@ if (!is_null($events['events'])) {
 				else if ($sss == "false"){
 				$messages = [
                                 'type' => 'text',
-                                'text' =>'room A is status : busy 
+                                'text' =>'Demo A is status : busy 
 				'.'Subject : '.$datavalue[1].'
 				'.'startTime : '.$datavalue[2].'
 				'.'endTime : '.$datavalue[3].'
-				'.'room A temp : '.$datavalue[4].'
-				'.'room A Humidity : '.$datavalue[5]
+				'.'Demo A temp : '.$datavalue[4].'
+				'.'Demo A Humidity : '.$datavalue[5]
 // 				"quickReply": => 
 // 				"items"=> [
 // 				"type"=> "action",
@@ -214,12 +214,12 @@ if (!is_null($events['events'])) {
 		  		}else{
 				$messages = [
                                 'type' => 'text',
-                                'text' => 'room A is status : waiting 
+                                'text' => 'Demo A is status : waiting 
 				'.'Subject : '.$datavalue[1].'
 				'.'startTime : '.$datavalue[2].'
 				'.'endTime : '.$datavalue[3].'
-				'.'room A temp : '.$datavalue[4].'
-				'.'room A Humidity : '.$datavalue[5]
+				'.'Demo A temp : '.$datavalue[4].'
+				'.'Demo A Humidity : '.$datavalue[5]
 // 				"quickReply": => 
 // 				"items"=> [
 // 				"type"=> "action",
