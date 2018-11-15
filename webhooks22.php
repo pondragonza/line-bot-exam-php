@@ -162,9 +162,9 @@ if (!is_null($events['events'])) {
 				$datavalue = json_decode($datavalue);
 				$testMsg = sprintf(
 					"%s<br/>%s<br/>%s<br/>"
-					, "Status";
-					, $datavalue[1];
-					, $datavalue[2];
+					, "Status"
+					, $datavalue[1]
+					, $datavalue[2]
 				);
 				$file3 = fopen($myfile3,'w+')or die ("can't open file");
  				$sss = ($datavalue[0]);
