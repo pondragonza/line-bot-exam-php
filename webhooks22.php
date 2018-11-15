@@ -161,7 +161,7 @@ if (!is_null($events['events'])) {
 				$datavalue = file_get_contents("value.txt");
 				$datavalue = json_decode($datavalue);
 				$testMsg = sprintf(
-					"%s<br/>%s<br/>%s<br/>"
+					"%s\n%s\n%s\n"
 					, "Status"
 					, $datavalue[1]
 					, $datavalue[2]
