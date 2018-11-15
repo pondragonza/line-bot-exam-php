@@ -160,15 +160,21 @@ if (!is_null($events['events'])) {
 			   if($oud == "Check") {
 				$datavalue = file_get_contents("value.txt");
 				$datavalue = json_decode($datavalue);
-				
+				$testMsg = sprintf(
+					"%s<br/>%s<br/>%s<br/>"
+					, "Status";
+					, $datavalue[1];
+					, $datavalue[2];
+				);
 				$file3 = fopen($myfile3,'w+')or die ("can't open file");
  				$sss = ($datavalue[0]);
 				 if ($sss == "true"){
 				$messages = [
                                 'type' => 'text',
-                                'text' => 'Demo A is status : free 
-			        /n'.'Demo A temp : '.$datavalue[1].'
-				/n'.'Demo A Humidity : '.$datavalue[2]
+                                'text' => $testMsg
+					//'Demo A is status : free 
+			        //'.'Demo A temp : '.$datavalue[1].'
+				//'.'Demo A Humidity : '.$datavalue[2]
 // 					,
 // 				"quickReply": => 
 // 				"items"=> [
