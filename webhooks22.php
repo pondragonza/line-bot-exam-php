@@ -160,15 +160,18 @@ if (!is_null($events['events'])) {
 			   if($oud == "Check") {
 				$datavalue = file_get_contents("value.txt");
 				$datavalue = json_decode($datavalue);
-				$testMsg = sprintf(
-					"%s\n%s\n%s\n"
-					, "Status"
-					, $datavalue[1]
-					, $datavalue[2]
-				);
+				
 				$file3 = fopen($myfile3,'w+')or die ("can't open file");
  				$sss = ($datavalue[0]);
 				 if ($sss == "true"){
+					
+				$testMsg = sprintf(
+					"%s\n%s\n%s\n"
+					, "Demo A is Status : free"
+					, "Demo A Temp : " . $datavalue[1]
+					, "Demo A Humidity : " . $datavalue[2]
+				);
+					 
 				$messages = [
                                 'type' => 'text',
                                 'text' => $testMsg
@@ -194,14 +197,25 @@ if (!is_null($events['events'])) {
 					 
 		  		}
 				else if ($sss == "false"){
+					$testMsg = sprintf(
+					"%s\n%s\n%s\n%s\n%s\n$s"
+					, "Demo A is Status : busy"
+					, "Subject : " . $datavalue[1]
+					, "StartTime : " . $datavalue[2]
+					, "EndTime : " . $datavalue[3]
+					, "Demo A Temp : " . $datavalue[4]
+					, "Demo A Humidity : " . $datavalue[5]
+				);
+					
 				$messages = [
                                 'type' => 'text',
-                                'text' =>'Demo A is status : busy 
-				'.'Subject : '.$datavalue[1].'
-				'.'startTime : '.$datavalue[2].'
-				'.'endTime : '.$datavalue[3].'
-				'.'Demo A temp : '.$datavalue[4].'
-				'.'Demo A Humidity : '.$datavalue[5]
+                                'text' => $testMsg
+// 					'Demo A is status : busy 
+// 				'.'Subject : '.$datavalue[1].'
+// 				'.'startTime : '.$datavalue[2].'
+// 				'.'endTime : '.$datavalue[3].'
+// 				'.'Demo A temp : '.$datavalue[4].'
+// 				'.'Demo A Humidity : '.$datavalue[5]
 // 				"quickReply": => 
 // 				"items"=> [
 // 				"type"=> "action",
@@ -218,14 +232,24 @@ if (!is_null($events['events'])) {
 // 					];
 					 
 		  		}else{
+					$testMsg = sprintf(
+					"%s\n%s\n%s\n%s\n%s\n$s"
+					, "Demo A is Status : waiting"
+					, "Subject : " . $datavalue[1]
+					, "StartTime : " . $datavalue[2]
+					, "EndTime : " . $datavalue[3]
+					, "Demo A Temp : " . $datavalue[4]
+					, "Demo A Humidity : " . $datavalue[5]
+				);
 				$messages = [
                                 'type' => 'text',
-                                'text' => 'Demo A is status : waiting 
-				'.'Subject : '.$datavalue[1].'
-				'.'startTime : '.$datavalue[2].'
-				'.'endTime : '.$datavalue[3].'
-				'.'Demo A temp : '.$datavalue[4].'
-				'.'Demo A Humidity : '.$datavalue[5]
+                                'text' => $testMsg
+// 					'Demo A is status : waiting 
+// 				'.'Subject : '.$datavalue[1].'
+// 				'.'startTime : '.$datavalue[2].'
+// 				'.'endTime : '.$datavalue[3].'
+// 				'.'Demo A temp : '.$datavalue[4].'
+// 				'.'Demo A Humidity : '.$datavalue[5]
 // 				"quickReply": => 
 // 				"items"=> [
 // 				"type"=> "action",
