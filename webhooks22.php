@@ -166,10 +166,10 @@ if (!is_null($events['events'])) {
 				 if ($sss == "true"){
 					
 				$testMsg = sprintf(
-					"%s\n%sC\n%s%"
+					"%s\n%s\n%s"
 					, "Demo A is Status : free"
-					, "Demo A Temp : " . $datavalue[1]
-					, "Demo A Humidity : " . $datavalue[2]
+					, "Demo A Temp : C" . $datavalue[1]
+					, "Demo A Humidity : %" . $datavalue[2]
 				);
 					 
 				$messages = [
@@ -198,13 +198,13 @@ if (!is_null($events['events'])) {
 		  		}
 				else if ($sss == "false"){
 					$testMsg = sprintf(
-					"%s\n%s\n%s\n%s\n%sC\n%s%"
+					"%s\n%s\n%s\n%s\n%s\n%s"
 					, "Demo A is Status : busy"
 					, "Subject : " . $datavalue[1]
 					, "StartTime : " . $datavalue[2]
 					, "EndTime : " . $datavalue[3]
-					, "Demo A Temp : " . $datavalue[4]
-					, "Demo A Humidity : " . $datavalue[5]
+					, "Demo A Temp : C" . $datavalue[4]
+					, "Demo A Humidity : %" . $datavalue[5]
 				);
 					
 				$messages = [
@@ -233,13 +233,13 @@ if (!is_null($events['events'])) {
 					 
 		  		}else{
 					$testMsg = sprintf(
-					"%s\n%s\n%s\n%s\n%sC\n%s%"
+					"%s\n%s\n%s\n%s\n%s\n%s"
 					, "Demo A is Status : waiting"
 					, "Subject : " . $datavalue[1]
 					, "StartTime : " . $datavalue[2]
 					, "EndTime : " . $datavalue[3]
-					, "Demo A Temp : " . $datavalue[4]
-					, "Demo A Humidity : " . $datavalue[5]
+					, "Demo A Temp : C" . $datavalue[4]
+					, "Demo A Humidity : %" . $datavalue[5]
 				);
 				$messages = [
                                 'type' => 'text',
