@@ -168,8 +168,8 @@ if (!is_null($events['events'])) {
 				$testMsg = sprintf(
 					"%s\n%s\n%s"
 					, "Demo A is Status : free"
-					, "Demo A Temp : C" . $datavalue[1]
-					, "Demo A Humidity : %" . $datavalue[2]
+					, "Demo A Temp : " . $datavalue[1] ."C" 
+					, "Demo A Humidity : " . $datavalue[2] ."%"
 				);
 					 
 				$messages = [
@@ -203,8 +203,8 @@ if (!is_null($events['events'])) {
 					, "Subject : " . $datavalue[1]
 					, "StartTime : " . $datavalue[2]
 					, "EndTime : " . $datavalue[3]
-					, "Demo A Temp : C" . $datavalue[4]
-					, "Demo A Humidity : %" . $datavalue[5]
+					, "Demo A Temp : " . $datavalue[4] ."C"
+					, "Demo A Humidity : " . $datavalue[5] ."%"
 				);
 					
 				$messages = [
@@ -238,8 +238,8 @@ if (!is_null($events['events'])) {
 					, "Subject : " . $datavalue[1]
 					, "StartTime : " . $datavalue[2]
 					, "EndTime : " . $datavalue[3]
-					, "Demo A Temp : C" . $datavalue[4]
-					, "Demo A Humidity : %" . $datavalue[5]
+					, "Demo A Temp : C" . $datavalue[4] ."C"
+					, "Demo A Humidity : %" . $datavalue[5] ."%"
 				);
 				$messages = [
                                 'type' => 'text',
