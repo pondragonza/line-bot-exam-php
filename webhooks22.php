@@ -198,7 +198,7 @@ if (!is_null($events['events'])) {
 		  		}
 				else if ($sss == "false"){
 					$testMsg = sprintf(
-					"%s\n%s\n%s\n%s\n%s\n%s"
+					"%s\n%s\n%s\n%s\n%s C\n%s %"
 					, "Demo A is Status : busy"
 					, "Subject : " . $datavalue[1]
 					, "StartTime : " . $datavalue[2]
@@ -233,7 +233,7 @@ if (!is_null($events['events'])) {
 					 
 		  		}else{
 					$testMsg = sprintf(
-					"%s\n%s\n%s\n%s\n%s\n%s"
+					"%s\n%s\n%s\n%s\n%s C\n%s %"
 					, "Demo A is Status : waiting"
 					, "Subject : " . $datavalue[1]
 					, "StartTime : " . $datavalue[2]
