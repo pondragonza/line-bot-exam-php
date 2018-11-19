@@ -166,7 +166,7 @@ if (!is_null($events['events'])) {
 				 if ($sss == "true"){
 					
 				$testMsg = sprintf(
-					"%s\n%s\n%s"
+					"%s\n%s C\n%s %"
 					, "Demo A is Status : free"
 					, "Demo A Temp : " . $datavalue[1]
 					, "Demo A Humidity : " . $datavalue[2]
