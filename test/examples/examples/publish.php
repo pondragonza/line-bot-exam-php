@@ -1,7 +1,7 @@
 <?php
 
 //require("test/phpMQTT.php");
-require("test/examples/phpMQTT.php");
+require("test/phpMQTT.php");
 
 $server = "tcp://10.0.20.1";     // change if necessary
 $port = 1883;                     // change if necessary
